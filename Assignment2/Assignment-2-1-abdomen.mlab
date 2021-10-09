@@ -1,0 +1,1066 @@
+// MDL v1 utf8
+mevislabVersion = 3.4.2
+network  {
+  watchlist = ""
+}
+module ImageResample {
+  internal  {
+    frame = "733 1237 120 56"
+    moduleGroupName = "Import Dataset"
+    windows  {
+      window _default {
+        geometry = "1148 623 294 233"
+        sizeHint = "273 233"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "710 270 500 600"
+        sizeHint = "260 220"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ImageResample
+    resamplingOperation = Upsampling
+    xResample = 2
+    yResample = 2
+    zResample = 1
+    cResample = 1
+    tResample = 1
+    uResample = 1
+    antiAliasingFilter = "Lanczos 2"
+    borderHandling = Fill
+    borderFillValue = 0
+    autoUpdate = TRUE
+  }
+}
+module LocalImage {
+  internal  {
+    frame = "662 1386 192 72"
+    moduleGroupName = "Import Dataset"
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "1036 678 488 144"
+        sizeHint = "488 144"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = LocalImage
+    name = $(DemoDataPath)/Tumor1_Head_t1.small.dcm
+    autoLoad = TRUE
+  }
+}
+module SoDepthPeelRenderer {
+  internal  {
+    frame = "2083 583 152 56"
+    moduleGroupName = "Compute Tumor Distance"
+    windows  {
+      window _default {
+        geometry = "814 471 299 316"
+        sizeHint = "299 316"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoDepthPeelRenderer
+    renderCaching = AUTO
+    boundingBoxCaching = AUTO
+    renderCulling = AUTO
+    pickCulling = AUTO
+    useStencilBuffer = FALSE
+    layers = 4
+    simulatedAlpha = 1
+    opaqueBackgroundPass = TRUE
+    sceneDepthCompare = FALSE
+    debugLayers = FALSE
+  }
+}
+module SoWEMRenderer {
+  internal  {
+    frame = "1919 667 208 80"
+    moduleGroupName = "Compute Tumor Distance"
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "868 388 337 404"
+        sizeHint = "337 404"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoWEMRendererHeadDist
+    interactionProviderID = ""
+    autoApply = TRUE
+    autoUpdate = TRUE
+    autoClear = TRUE
+    enableCreaseAngle = FALSE
+    creaseAngle = 75
+    useHighlightSelected = FALSE
+    highlightColor = "1 0 0"
+    highlightIntensity = 0.5
+    faceRenderingMode = WEM_FACE_RENDERING_MODE_AUTO
+    allowHits = TRUE
+    performPreHitTest = FALSE
+    cursorShape = CROSS_CURSOR
+    colorMode = WEM_COLOR_LUT_VALUES
+    drawFaces = TRUE
+    faceDiffuseColor = "0.792156994342804 0.792156994342804 0.792156994342804"
+    useFaceAmbientColor = TRUE
+    faceAmbientColor = "0.266667008399963 0.266667008399963 0.266667008399963"
+    useFaceSpecularColor = TRUE
+    faceSpecularColor = "0.0666669979691505 0.0666669979691505 0.0666669979691505"
+    faceAlphaValue = 1
+    faceShininessValue = 1
+    primitiveValueLists = "LUT,LUT Perpendicular,LUT Tangential"
+    selectedPrimitiveValueList = LUT
+    selectedPrimitiveValueAlphaList = LUT
+    primitiveValueListValid = TRUE
+    primitiveValueListAlphaValid = TRUE
+    overwriteAlphaWithPVL = FALSE
+    wemPatchToRender = -1
+    maxWEMPatchIndex = 0
+    cachePatches = FALSE
+    sendAdjacency = FALSE
+    hitModifierKey = AllModifiersMask
+    selectedTab = 0
+  }
+}
+module SoLUTEditor {
+  internal  {
+    frame = "2187 815 104 56"
+    moduleGroupName = "Compute Tumor Distance"
+    windows  {
+      window _default {
+        geometry = "93 331 578 436"
+        sizeHint = "578 436"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "1053 228 500 600"
+        sizeHint = "260 223"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoLUTEditor
+    rangeMin = -0.47765899
+    rangeMax = 1.15326
+    viewMin = -0.47765899
+    viewMax = 1.15326
+    window = 1
+    level = 0.5
+    allowNewPoints = TRUE
+    updateLutWhileDragging = TRUE
+    relativeLut = FALSE
+    colorInterpolation = InterpolateRGB
+    colorPoints = "[ -0.477658987045288 0 0 0, -0.272982001304626 0 0 0, -0.0780514031648636 0.278430998325348 0.933332979679108 0, 0 0.858824014663696 0.203922003507614 0.0745097994804382, 0.105517998337746 0 1 0.152941003441811, 0.250081986188889 0.470587998628616 0.470587998628616 0.470587998628616, 0.779642999172211 0 0 0, 1.15325999259949 0 0 0 ]"
+    alphaPoints = "[ -0.477658987045288 0, -0.272982001304626 0.631901979446411, -0.0780514031648636 1, 0 1, 0.105517998337746 1, 0.250081986188889 1, 0.779642999172211 0.717791020870209, 1.15325999259949 0 ]"
+    alphaFactor = 1
+    newRangeMin = 0.19667673
+    newRangeMax = 178.26558
+    newRangeMode = ClipFormerLUT
+    colorEditorHeight = 24
+    showColorEditor = TRUE
+    showAlphaEditor = TRUE
+    markerRadius = 4
+    selectedMarkerRadius = 6
+    snapMarkerRadius = 10
+    alphaLineWidth = 2
+    backgroundColor = "0.800000011920929 0.800000011920929 0.800000011920929"
+    borderColor = "0 0 0"
+    alphaLineColor = "0 0 0"
+    histogramColor = "0.400000005960464 0.400000005960464 0.400000005960464"
+    drawColoredMarkers = TRUE
+    markerColor = "1 1 1"
+    selectedMarkerColor = "1 0.5 0.5"
+    selectedTriangleSize = 8
+    triangleSize = 6
+    useAntiAliasing = TRUE
+  }
+}
+module SoWEMRenderer {
+  internal  {
+    frame = "2122 668 216 80"
+    moduleGroupName = "Compute Tumor Distance"
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "889 414 337 404"
+        sizeHint = "337 404"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoWEMRendererTumorDist
+    interactionProviderID = ""
+    autoApply = TRUE
+    autoUpdate = TRUE
+    autoClear = TRUE
+    enableCreaseAngle = FALSE
+    creaseAngle = 75
+    useHighlightSelected = FALSE
+    highlightColor = "1 0 0"
+    highlightIntensity = 0.5
+    faceRenderingMode = WEM_FACE_RENDERING_MODE_AUTO
+    allowHits = TRUE
+    performPreHitTest = FALSE
+    cursorShape = CROSS_CURSOR
+    colorMode = WEM_COLOR_GENERAL
+    drawFaces = TRUE
+    faceDiffuseColor = "0.792156875133514 0 0.0117647061124444"
+    useFaceAmbientColor = TRUE
+    faceAmbientColor = "0.941176474094391 0.517647087574005 0.52549022436142"
+    useFaceSpecularColor = TRUE
+    faceSpecularColor = "0.0666669979691505 0.0666669979691505 0.0666669979691505"
+    faceAlphaValue = 0.60000002
+    faceShininessValue = 1
+    primitiveValueLists = LUT
+    selectedPrimitiveValueList = LUT
+    selectedPrimitiveValueAlphaList = LUT
+    primitiveValueListValid = TRUE
+    primitiveValueListAlphaValid = TRUE
+    overwriteAlphaWithPVL = FALSE
+    wemPatchToRender = -1
+    maxWEMPatchIndex = 0
+    cachePatches = FALSE
+    sendAdjacency = FALSE
+    hitModifierKey = AllModifiersMask
+    selectedTab = 0
+  }
+}
+module WEMSurfaceDistance {
+  internal  {
+    frame = "1942 800 192 72"
+    moduleGroupName = "Compute Tumor Distance"
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "883 375 317 447"
+        sizeHint = "293 447"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "482 228 500 600"
+        sizeHint = "260 223"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = WEMSurfaceDistance1
+    id = 0
+    autoApply = TRUE
+    updateMode = AutoUpdate
+    overwriteLabelDescription = TRUE
+    label = ""
+    description = ""
+    shouldComputeNormals = TRUE
+    workDirectlyOnInputWEMs = FALSE
+    listenToFinishNotifications = TRUE
+    listenToRepaintNotifications = TRUE
+    listenToSelectionChangedNotifications = TRUE
+    triangulationMode = Strip
+    relativeError = 0
+    numEntries = 200
+    shouldComputeSignedDistances = FALSE
+    addEdgesToNearestNodes = FALSE
+    shouldNormalizeDist = TRUE
+    useLUTPrimitiveValueList = TRUE
+    customPrimitiveValueList = "Surface Distance"
+  }
+}
+module OrthoView2D {
+  internal  {
+    frame = "686 1051 120 56"
+    moduleGroupName = SimpleThreshold
+    windows  {
+      window _default {
+        geometry = "1214 546 465 406"
+        sizeHint = "400 428"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "133 392 500 586"
+        sizeHint = "260 220"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = OrthoView2D
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    synchronizePosition = TRUE
+    layout = LAYOUT_CUBE_EQUAL
+    filterMode = FILTER_LINEAR
+    synchronizeZoom = TRUE
+    synchronizePanning = FALSE
+    useGlobalInputImage = TRUE
+    snapToCenter = FALSE
+    alternCubeLayout = FALSE
+    timePoint = 0
+    useManagedInteraction = FALSE
+    enableSlicing = TRUE
+    borderOn = TRUE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    grayWidth = 415.606292724609
+    grayCenter = 215.962493896484
+    annotationOn = TRUE
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationFontSize = ANNO_SIZE_AUTO
+    valueHighPrecision = TRUE
+    annoCoords = Voxel
+    showCurrentPos = TRUE
+    worldPosition = "-3.80588531494141 -25.0161056518555 56.0560607910156"
+    coloredMode = FALSE
+  }
+}
+module GetVoxelValue {
+  internal  {
+    frame = "706 891 144 72"
+    moduleGroupName = SimpleThreshold
+    showNetworkPanel = true
+    windows  {
+      window _automatic {
+        geometry = "-39 533 500 600"
+        sizeHint = "260 220"
+        wasOpen = no
+      }
+      window _default {
+        geometry = "501 438 546 260"
+        sizeHint = "546 260"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = GetVoxelValue
+    position = "-3.80588531494141 -25.0161056518555 56.0560607910156 0 0 0"
+    updateMode = AutoClear
+    coordinateType = World
+    interpolation = NearestNeighbor
+  }
+}
+module IntervalThreshold {
+  internal  {
+    frame = "976 897 128 56"
+    moduleGroupName = SimpleThreshold
+    windows  {
+      window _automatic {
+        geometry = "710 270 500 600"
+        sizeHint = "260 220"
+        wasOpen = no
+      }
+      window _default {
+        geometry = "2058 331 586 454"
+        sizeHint = "467 362"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = IntervalThreshold
+    lowerType = UserDef
+    innerType = ImgOrig
+    upperType = UserDef
+    centerWidthSet = TRUE
+    threshCenter = 143
+    threshWidth = 44
+    threshMin = 121
+    threshMax = 165
+    lowerUserValue = 0
+    innerUserValue = 1
+    upperUserValue = 0
+    changeMinMax = FALSE
+    changedMin = 0
+    changedMax = 1000
+  }
+}
+module RegionGrowing {
+  internal  {
+    frame = "949 613 168 72"
+    moduleGroupName = "Extract Tumor"
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "2023 345 842 653"
+        sizeHint = "672 521"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = RegionGrowing
+    autoUpdateMode = AutoUpdate
+    lowerThreshold = 10
+    upperThreshold = 680
+    enableAutoThresholdInterval = FALSE
+    basicNeighborhoodType = BNBH_3D_6_XYZ
+    extendedNeighborhoodType = ENBH_2D_4_XY
+    useAdditionalSeed = FALSE
+    additionalSeed = "0 0 0 0 0 0"
+    additionalSeedType = 0
+    additionalSeedCoordSystem = VoxelCoordinates
+    initStackSizeTweak = 0.100000001490116
+    prohibitInputScalingTweak = FALSE
+    incrementalUpdateMode = Smart
+    useExtendedNBH = FALSE
+    calcBoundaryOverlap = FALSE
+    unitType = UnitTypeGrayValue
+    internalAccuracy = Auto
+    autoUpdateUnitType = FALSE
+    stretchOutputOverTime = FALSE
+    showPartialResults = FALSE
+    acceptedMarkerType = -1
+    autoSelectHigherCoords = TRUE
+    cCoord = 0
+    uCoord = 0
+    posFillValue = -1
+    negFillValue = 0
+    invertResult = FALSE
+    showOuterBoundariesOnly = FALSE
+    upperVolumeLimit_ml = 100
+    enableUpperVolumeLimit = FALSE
+    autoThresholdIntervalSizeInPercent = 5
+  }
+}
+module ConstantXMarkerList {
+  internal  {
+    frame = "681 701 144 56"
+    moduleGroupName = "Extract Tumor"
+    windows  {
+      window _default {
+        geometry = "319 729 392 523"
+        sizeHint = "392 523"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "985 403 500 600"
+        sizeHint = "260 220"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ConstantXMarkerList
+    markerList = "-3.80588531494141 -25.0161056518555 56.0560607910156"
+  }
+}
+module IsoSurface {
+  internal  {
+    frame = "969 485 128 56"
+    moduleGroupName = "Extract Tumor"
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "781 423 358 295"
+        sizeHint = "358 295"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = IsoSurface1
+    isoValue = 100
+    quality = 1
+    useInterpolation = TRUE
+    useSmoothing = FALSE
+    smoothingPasses = 5
+    smoothingFactor = 0.2
+    usePolygonReduction = FALSE
+    targetReduction = 70
+    autoUpdate = TRUE
+    autoApply = TRUE
+    selectedTab = 0
+  }
+}
+module FastMorphology {
+  internal  {
+    frame = "726 542 168 72"
+    moduleGroupName = "Extract Tumor"
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "775 394 385 353"
+        sizeHint = "371 353"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = FastMorphology
+    morphologicOperation = Opening
+    xSize = 1
+    ySize = 1
+    zSize = 1
+    cSize = 0
+    tSize = 0
+    uSize = 0
+    useInputMaxValue = FALSE
+    userSetMaxValue = 1
+    autoUpdate = TRUE
+    useGreyScaleMorphology = TRUE
+    boundaryHandling = "Propagate boundary values"
+    boundaryFillValue = 0
+  }
+}
+module SoExaminerViewer {
+  internal  {
+    frame = "1268 470 144 56"
+    moduleGroupName = "Visualizing Results"
+    windows  {
+      window _viewer {
+        geometry = "3176 338 502 502"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoExaminerViewer1
+    renderCaching = AUTO
+    boundingBoxCaching = AUTO
+    renderCulling = AUTO
+    pickCulling = AUTO
+    border = FALSE
+    background = "0 0 0"
+    transparency = BLEND
+    antialiasing = FALSE
+    antialiasingNumPasses = 1
+    useSampleBuffers = FALSE
+    numSamples = 8
+    grabKeyFocus = TRUE
+    enableKeyCommands = TRUE
+    snapshotFormat = SNAPSHOT_RGB
+    outputAviFile = ""
+    autoRedrawWhenRecording = TRUE
+    frameRate = 7
+    frameRateAvi = 15
+    outputSnapshotFile = none
+    outputSnapshotFileWritten = none
+    autoIncreaseFile = TRUE
+    showSnapshotWithShell = FALSE
+    snapCount = 0
+    inputDevicesList = ""
+    headlight = TRUE
+    decoration = TRUE
+    popupMenuEnabled = FALSE
+    viewing = TRUE
+    autoClipping = TRUE
+    drawStyle = VIEW_AS_IS
+    interactiveDrawStyle = VIEW_LOW_COMPLEXITY
+    viewAllFlag = FALSE
+    initialCameraOrientation = CAMERA_KEEP_AS_IS
+    applyCameraOrientation = CAMERA_KEEP_AS_IS
+    cameraType = CAMERA_ORTHOGRAPHIC
+    autoApplyUserSettingOrientation = FALSE
+    userSettingOrientation = "0 0 1 0"
+    automaticViewAll = FALSE
+    storeCurrentState = TRUE
+    saveCamera = TRUE
+    cursor = TRUE
+    isCameraStored = TRUE
+    perspective = FALSE
+    stereoViewing = FALSE
+    stereoOffset = 3
+    height = 249.04158
+    position = "400.615081787109 -24.8254432678223 -0.36011528968811"
+    orientation = "0.599400520324707 0.568443238735199 0.563552439212799 2.04260683059692"
+    nearDistance = 374.41971
+    farDistance = 495.60004
+    focalDistance = 405.98013
+    forceRedrawOnInteraction = FALSE
+    button1events = TO_VIEWER
+    button2events = TO_VIEWER
+    button3events = TO_VIEWER
+    keyEvents = TO_VIEWER
+    animationEnabled = FALSE
+    feedback = FALSE
+    feedbackSize = 32
+    mouseInteraction = ""
+    rotationAxis = "0 1 0"
+    rotationAngle = 360
+    rotationSteps = 80
+    recordRotation = TRUE
+    wheelZoomEnabled = TRUE
+    wheelRotationEnabled = TRUE
+  }
+}
+module SoWEMRenderer {
+  internal  {
+    frame = "1268 590 160 72"
+    moduleGroupName = "Visualizing Results"
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "718 336 484 469"
+        sizeHint = "484 469"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoWEMRenderer
+    interactionProviderID = ""
+    autoApply = TRUE
+    autoUpdate = TRUE
+    autoClear = TRUE
+    enableCreaseAngle = FALSE
+    creaseAngle = 75
+    useHighlightSelected = FALSE
+    highlightColor = "1 0 0"
+    highlightIntensity = 0.5
+    faceRenderingMode = WEM_FACE_RENDERING_MODE_AUTO
+    allowHits = FALSE
+    performPreHitTest = FALSE
+    cursorShape = CROSS_CURSOR
+    colorMode = WEM_COLOR_GENERAL
+    drawFaces = TRUE
+    faceDiffuseColor = "0.486274510622025 0.486274510622025 0.486274510622025"
+    useFaceAmbientColor = TRUE
+    faceAmbientColor = "0.266667008399963 0.266667008399963 0.266667008399963"
+    useFaceSpecularColor = TRUE
+    faceSpecularColor = "0 0 0"
+    faceAlphaValue = 1
+    faceShininessValue = 1
+    primitiveValueLists = LUT
+    selectedPrimitiveValueList = LUT
+    selectedPrimitiveValueAlphaList = LUT
+    primitiveValueListValid = TRUE
+    primitiveValueListAlphaValid = TRUE
+    overwriteAlphaWithPVL = FALSE
+    wemPatchToRender = -1
+    maxWEMPatchIndex = 0
+    cachePatches = FALSE
+    sendAdjacency = FALSE
+    hitModifierKey = AllModifiersMask
+    selectedTab = 0
+  }
+}
+module IsoSurface {
+  internal  {
+    frame = "1338 731 128 56"
+    moduleGroupName = "Visualizing Results"
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "781 423 358 295"
+        sizeHint = "358 295"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = IsoSurface3
+    isoValue = 80
+    quality = 1
+    useInterpolation = TRUE
+    useSmoothing = FALSE
+    smoothingPasses = 5
+    smoothingFactor = 0.2
+    usePolygonReduction = FALSE
+    targetReduction = 70
+    autoUpdate = TRUE
+    autoApply = TRUE
+    selectedTab = 0
+  }
+}
+module ROISelect {
+  internal  {
+    frame = "1366 867 88 56"
+    moduleGroupName = "Visualizing Results"
+    windows  {
+      window _default {
+        geometry = "494 359 506 389"
+        sizeHint = "506 389"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ROISelect
+    editMode = Edit
+    currentPosOn = Navigate
+    editModeFieldDisable = FALSE
+    allTimepoints = TRUE
+    usePreview = FALSE
+    timepoint = 0
+    unit = ""
+    startWorldPos = "5.64928436279297 -109.714706420898 107.417205810547"
+    startVoxelX = 12
+    startVoxelY = 9
+    startVoxelZ = 25
+    endWorldPos = "-92.0698623657227 117.089988708496 -125.35612487793"
+    endVoxelX = 179
+    endVoxelY = 181
+    endVoxelZ = 61
+    boxOn = TRUE
+    boxShiftListen = RELEASED
+    boxCtrlListen = RELEASED
+    boxBlend = 0.14
+    boxColor = "1 0.979525029659271 0.38740399479866"
+    allowDraw = TRUE
+    reset = FALSE
+    currentPos = "-4.41480112075806 1.44948351383209 -6.73318338394165"
+    currentPosShiftListen = PRESSED
+    currentPosCtrlListen = RELEASED
+    currentPosColor = "1 1 1"
+    layout = LAYOUT_CUBE_EQUAL
+    worldPosition = "-4.41480112075806 -122.73518371582 -6.73318338394165"
+    useGlobalInputImage = TRUE
+    restriction = MaxMBytesIsotropic
+    limit = 10
+    grayWidth = 0.5
+    grayCenter = 0.25
+    annotationColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationOn = TRUE
+    annotShowAnnot = ANNO_SHOW_HIDE
+    annotFontSize = ANNO_SIZE_AUTO
+    annotShowOrientation = ANNO_ORIENTATION_SIZE_WEIGHTED
+    annotVerticalRuler = TRUE
+    annotHorizontalRuler = FALSE
+  }
+}
+module SoExaminerViewer {
+  internal  {
+    frame = "951 366 144 56"
+    moduleGroupName = "Extract Tumor"
+    windows  {
+      window _viewer {
+        geometry = "2530 231 502 502"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoExaminerViewer3
+    renderCaching = AUTO
+    boundingBoxCaching = AUTO
+    renderCulling = AUTO
+    pickCulling = AUTO
+    border = FALSE
+    background = "0 0 0"
+    transparency = BLEND
+    antialiasing = FALSE
+    antialiasingNumPasses = 1
+    useSampleBuffers = FALSE
+    numSamples = 8
+    grabKeyFocus = TRUE
+    enableKeyCommands = TRUE
+    snapshotFormat = SNAPSHOT_RGB
+    outputAviFile = ""
+    autoRedrawWhenRecording = TRUE
+    frameRate = 7
+    frameRateAvi = 15
+    outputSnapshotFile = none
+    outputSnapshotFileWritten = none
+    autoIncreaseFile = TRUE
+    showSnapshotWithShell = FALSE
+    snapCount = 0
+    inputDevicesList = ""
+    headlight = TRUE
+    decoration = TRUE
+    popupMenuEnabled = FALSE
+    viewing = TRUE
+    autoClipping = TRUE
+    drawStyle = VIEW_AS_IS
+    interactiveDrawStyle = VIEW_LOW_COMPLEXITY
+    viewAllFlag = FALSE
+    initialCameraOrientation = CAMERA_KEEP_AS_IS
+    applyCameraOrientation = CAMERA_KEEP_AS_IS
+    cameraType = CAMERA_PERSPECTIVE
+    autoApplyUserSettingOrientation = FALSE
+    userSettingOrientation = "0 0 1 0"
+    automaticViewAll = FALSE
+    storeCurrentState = TRUE
+    saveCamera = TRUE
+    cursor = TRUE
+    isCameraStored = TRUE
+    perspective = TRUE
+    stereoViewing = FALSE
+    stereoOffset = 3
+    height = 1.5707964
+    position = "-134.433639526367 -104.036727905273 -9.98109436035156"
+    orientation = "0.809829652309418 -0.492556512355804 -0.318691164255142 2.08848714828491"
+    nearDistance = 101.03773
+    farDistance = 204.14883
+    focalDistance = 159.76375
+    forceRedrawOnInteraction = FALSE
+    button1events = TO_VIEWER
+    button2events = TO_VIEWER
+    button3events = TO_VIEWER
+    keyEvents = TO_VIEWER
+    animationEnabled = FALSE
+    feedback = FALSE
+    feedbackSize = 32
+    mouseInteraction = ""
+    rotationAxis = "0 1 0"
+    rotationAngle = 360
+    rotationSteps = 80
+    recordRotation = TRUE
+    wheelZoomEnabled = TRUE
+    wheelRotationEnabled = TRUE
+  }
+}
+module SoWEMRenderer {
+  internal  {
+    frame = "1443 590 168 72"
+    moduleGroupName = "Visualizing Results"
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "718 336 484 469"
+        sizeHint = "484 469"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoWEMRenderer1
+    interactionProviderID = ""
+    autoApply = TRUE
+    autoUpdate = TRUE
+    autoClear = TRUE
+    enableCreaseAngle = FALSE
+    creaseAngle = 75
+    useHighlightSelected = FALSE
+    highlightColor = "1 0 0"
+    highlightIntensity = 0.5
+    faceRenderingMode = WEM_FACE_RENDERING_MODE_AUTO
+    allowHits = FALSE
+    performPreHitTest = FALSE
+    cursorShape = CROSS_CURSOR
+    colorMode = WEM_COLOR_GENERAL
+    drawFaces = TRUE
+    faceDiffuseColor = "0.537254929542542 0.0352941192686558 0.10196078568697"
+    useFaceAmbientColor = TRUE
+    faceAmbientColor = "0.266667008399963 0.266667008399963 0.266667008399963"
+    useFaceSpecularColor = TRUE
+    faceSpecularColor = "0 0 0"
+    faceAlphaValue = 1
+    faceShininessValue = 1
+    primitiveValueLists = LUT
+    selectedPrimitiveValueList = LUT
+    selectedPrimitiveValueAlphaList = LUT
+    primitiveValueListValid = TRUE
+    primitiveValueListAlphaValid = TRUE
+    overwriteAlphaWithPVL = FALSE
+    wemPatchToRender = -1
+    maxWEMPatchIndex = 0
+    cachePatches = FALSE
+    sendAdjacency = FALSE
+    hitModifierKey = AllModifiersMask
+    selectedTab = 0
+  }
+}
+module IsoSurface {
+  internal  {
+    frame = "1494 723 128 56"
+    moduleGroupName = "Visualizing Results"
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "781 423 358 295"
+        sizeHint = "358 295"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = IsoSurface2
+    isoValue = 80
+    quality = 1
+    useInterpolation = TRUE
+    useSmoothing = FALSE
+    smoothingPasses = 5
+    smoothingFactor = 0.2
+    usePolygonReduction = FALSE
+    targetReduction = 70
+    autoUpdate = TRUE
+    autoApply = TRUE
+    selectedTab = 0
+  }
+}
+module SoExaminerViewer {
+  internal  {
+    frame = "1665 493 144 56"
+    moduleGroupName = "Visualizing Results"
+    windows  {
+      window _viewer {
+        geometry = "1243 320 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoExaminerViewer2
+    renderCaching = AUTO
+    boundingBoxCaching = AUTO
+    renderCulling = AUTO
+    pickCulling = AUTO
+    border = FALSE
+    background = "0 0 0"
+    transparency = BLEND
+    antialiasing = FALSE
+    antialiasingNumPasses = 1
+    useSampleBuffers = FALSE
+    numSamples = 8
+    grabKeyFocus = TRUE
+    enableKeyCommands = TRUE
+    snapshotFormat = SNAPSHOT_RGB
+    outputAviFile = ""
+    autoRedrawWhenRecording = TRUE
+    frameRate = 7
+    frameRateAvi = 15
+    outputSnapshotFile = none
+    outputSnapshotFileWritten = none
+    autoIncreaseFile = TRUE
+    showSnapshotWithShell = FALSE
+    snapCount = 0
+    inputDevicesList = ""
+    headlight = TRUE
+    decoration = TRUE
+    popupMenuEnabled = FALSE
+    viewing = TRUE
+    autoClipping = TRUE
+    drawStyle = VIEW_AS_IS
+    interactiveDrawStyle = VIEW_LOW_COMPLEXITY
+    viewAllFlag = FALSE
+    initialCameraOrientation = CAMERA_KEEP_AS_IS
+    applyCameraOrientation = CAMERA_KEEP_AS_IS
+    cameraType = CAMERA_ORTHOGRAPHIC
+    autoApplyUserSettingOrientation = FALSE
+    userSettingOrientation = "0 0 1 0"
+    automaticViewAll = FALSE
+    storeCurrentState = TRUE
+    saveCamera = TRUE
+    cursor = TRUE
+    isCameraStored = TRUE
+    perspective = FALSE
+    stereoViewing = FALSE
+    stereoOffset = 3
+    height = 184.95929
+    position = "399.757843017578 33.0323638916016 -26.7952098846436"
+    orientation = "0.546781957149506 0.623676955699921 0.558620154857635 2.13820457458496"
+    nearDistance = 367.53955
+    farDistance = 501.642
+    focalDistance = 405.98013
+    forceRedrawOnInteraction = FALSE
+    button1events = TO_VIEWER
+    button2events = TO_VIEWER
+    button3events = TO_VIEWER
+    keyEvents = TO_VIEWER
+    animationEnabled = FALSE
+    feedback = FALSE
+    feedbackSize = 32
+    mouseInteraction = ""
+    rotationAxis = "0 1 0"
+    rotationAngle = 360
+    rotationSteps = 80
+    recordRotation = TRUE
+    wheelZoomEnabled = TRUE
+    wheelRotationEnabled = TRUE
+  }
+}
+connections  {
+  ImageResample.input0 = LocalImage.outImage
+  SoDepthPeelRenderer.children = "SoWEMRendererHeadDist.self SoWEMRendererTumorDist.self"
+  SoWEMRendererHeadDist.inWEM = WEMSurfaceDistance1.outWEM
+  SoWEMRendererHeadDist.inLUT = SoLUTEditor.outLUT
+  SoLUTEditor.newRangeMin = WEMSurfaceDistance1.minimumDistance
+  SoLUTEditor.newRangeMax = WEMSurfaceDistance1.maximumDistance
+  SoWEMRendererTumorDist.inWEM = IsoSurface2.outWEM
+  WEMSurfaceDistance1.inWEM = IsoSurface3.outWEM
+  WEMSurfaceDistance1.inWEM2 = IsoSurface2.outWEM
+  OrthoView2D.image = ImageResample.output0
+  GetVoxelValue.input0 = ImageResample.output0
+  GetVoxelValue.position = OrthoView2D.worldPosition
+  GetVoxelValue.update = GetVoxelValue.position
+  IntervalThreshold.input0 = ImageResample.output0
+  IntervalThreshold.threshCenter = GetVoxelValue.outputValue
+  RegionGrowing.input0 = FastMorphology.output0
+  RegionGrowing.inMarkerList = ConstantXMarkerList.outputXMarkerList
+  ConstantXMarkerList.markerList = OrthoView2D.worldPosition
+  IsoSurface1.inImage = RegionGrowing.output1
+  FastMorphology.input0 = IntervalThreshold.output0
+  SoExaminerViewer1.children = "SoWEMRenderer.self SoWEMRenderer1.self"
+  SoWEMRenderer.inWEM = IsoSurface3.outWEM
+  IsoSurface3.inImage = ROISelect.outImage
+  ROISelect.inImage = ImageResample.output0
+  SoExaminerViewer3.children = IsoSurface1.outScene
+  SoWEMRenderer1.inWEM = IsoSurface2.outWEM
+  IsoSurface2.inImage = RegionGrowing.output1
+  SoExaminerViewer2.children = SoDepthPeelRenderer.self
+}
+networkModel  {
+  parentItems  {
+    0  {
+      MLABNetworkModelItem MLABNetworkModelItemGroup {
+        uniqueId = 77
+        objectName = "Compute Tumor Distance"
+        parentUniqueId = 0
+        color  {
+          r = 45
+          g = 226
+          b = 226
+          a = 40
+        }
+      }
+      MLABNetworkModelItem MLABNetworkModelItemGroup {
+        uniqueId = 127
+        objectName = "Import Dataset"
+        parentUniqueId = 0
+        color  {
+          r = 45
+          g = 226
+          b = 226
+          a = 40
+        }
+      }
+      MLABNetworkModelItem MLABNetworkModelItemGroup {
+        uniqueId = 23
+        objectName = SimpleThreshold
+        parentUniqueId = 0
+        color  {
+          r = 45
+          g = 226
+          b = 226
+          a = 40
+        }
+      }
+      MLABNetworkModelItem MLABNetworkModelItemGroup {
+        uniqueId = 54
+        objectName = "Extract Tumor"
+        parentUniqueId = 0
+        color  {
+          r = 45
+          g = 226
+          b = 226
+          a = 40
+        }
+      }
+      MLABNetworkModelItem MLABNetworkModelItemGroup {
+        uniqueId = 132
+        objectName = "Visualizing Results"
+        parentUniqueId = 0
+        color  {
+          r = 45
+          g = 226
+          b = 226
+          a = 40
+        }
+      }
+    }
+  }
+}

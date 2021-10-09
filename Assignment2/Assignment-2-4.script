@@ -1,0 +1,156 @@
+Interface {
+  Parameters {
+    Field persistentToggle { type = Bool value = false }    
+    Field name     { type = string value = "$(*DemoDataPath*)/BrainMultiModal/ProbandT1.dcm" }
+    Field isoValue         { internalName = "IsoSurface1.isoValue"      }
+    Field quality          { type = int value = 3 min = 1 max = 12           }           
+    Field apply       { type = trigger triggersLoading = Yes }
+    Field autoUpdate  { type = bool value = false }
+    Field autoApply   { type = bool value = false }
+  }
+}
+
+///////////////////////////////////////
+
+// Secondly, there is the Commands section. It is used to declare and import Python scripts and assign functions.
+// For instance, a Button may require a certain function to trigger, but MeVisLab will need to know where the source definitions are located.
+Commands {
+
+  // Indicate the source Python file
+  source = $(LOCAL)/Assignment-2-4.py
+  
+  // Lets also update the ProgressBar with a float value derived from the counter value
+  initCommand        = init
+  FieldListener { 
+    listenField = isoValue
+    listenField = quality
+    command     = updateFields
+  }
+  
+  FieldListener apply { command = applyIsoSurface }
+  
+}
+
+///////////////////////////////////////
+
+// Window definition! Here all the MDL code will go which dictates how UI elements look.
+Window MyViewer {
+
+  // Vertical and Horizontal are layout controls.
+  Vertical {
+    expandY = YES    
+    
+    // Splitter organizes any children in it horizontally or vertically. 
+    // It will show draggable borders between elements. If you hover over the dividing line between 
+    // for instance Viewer A and the settings pane in the middle, you will be able to resize the settings and Viewer area.
+    Splitter {
+    
+      // Names of modules/viewers are case sensitive.
+      
+      Viewer Ortho2D.self {
+        name            = "Ortho2D"    
+        clone           = NO
+        preferredWidth  = 600
+        preferredHeight = 500
+      }
+      
+      Vertical {
+        expandX        = NO
+        preferredWidth = 400
+        panelName      = "Some_Settings"
+        
+        // A TabView lets us have multiple options or settings in a compact area
+        TabView {
+          TabViewItem "Import Settings" {
+            
+            Box "Load Data" {
+              Horizontal {
+                FieldLabel name { title = "Name:" labelAlignGroup = group1 }
+                ComboBox name { name = pathChoices }
+                Button { title = "Browse..." command = fileDialog }
+                Button { title = "Load"    command = "py: LoadImage()"        }
+              }   
+            }         
+            Box "Iso Surface" {        
+              Horizontal {
+                Field isoValue { step = 100 }
+                Field quality { title = "Resolution:" step = 1 }
+              }
+              Horizontal {
+                CheckBox autoUpdate {}
+                CheckBox autoApply {}
+                Button   apply {}
+              }
+            }   
+          }
+          TabViewItem "MPR Panel" {
+            Vertical {
+              Viewer SoRenderArea.self {
+                name            = "SoRenderArea"    
+                clone           = NO
+                preferredWidth  = 500
+                preferredHeight = 500
+              }
+              Viewer SoExaminerViewer3.self {
+                name            = "SoExaminerViewer3"    
+                clone           = NO
+                preferredWidth  = 500
+                preferredHeight = 500
+              }
+            }                 
+          }
+          TabViewItem "CPR Panel" {
+            Box  {
+              Button { title = "Delete All Markers"    command = "py: deleteAllMarkers() "        }
+            }
+            Vertical {
+              
+              Horizontal {
+                Viewer 2DMarker.self {
+                  name            = "2DMarker"    
+                  clone           = NO
+                  preferredWidth  = 500
+                  preferredHeight = 500
+                }
+                Viewer CPR3DPath.self {
+                  name            = "CPR3DPath"    
+                  clone           = NO
+                  preferredWidth  = 500
+                  preferredHeight = 500
+                }
+              }
+              Horizontal {
+                Viewer PathStack.self {
+                  name            = "PathStack"    
+                  clone           = NO
+                  preferredWidth  = 500
+                  preferredHeight = 500
+                }
+                Viewer PathReformat.self {
+                  name            = "PathReformat"    
+                  clone           = NO
+                  preferredWidth  = 500
+                  preferredHeight = 500
+                }
+              }      
+            }
+          }
+        }
+      }
+      
+      // Lastly, add a viewer on the right-side of the settings menu.
+      Viewer Seg3D.self {
+        name            = "Seg3D"    
+        clone           = NO
+        preferredWidth  = 600
+        preferredHeight = 500
+      }
+    }
+  }
+    
+  
+
+}
+
+
+
