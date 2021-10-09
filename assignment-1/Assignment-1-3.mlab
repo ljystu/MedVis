@@ -1,0 +1,2742 @@
+// MDL v1 utf8
+mevislabVersion = 3.4.2
+network  {
+  watchlist = ""
+}
+module FFT {
+  internal  {
+    frame = "-123 205 56 56"
+    moduleGroupName = "Showcase Fourier Scaling"
+    windows  {
+      window _default {
+        geometry = "882 596 279 304"
+        sizeHint = "279 304"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = FFT
+    xDim = TRUE
+    yDim = TRUE
+    zDim = FALSE
+    cDim = FALSE
+    tDim = FALSE
+    uDim = FALSE
+    xDimSize = 128
+    yDimSize = 128
+    zDimSize = 1
+    cDimSize = 1
+    tDimSize = 1
+    uDimSize = 1
+    calculateInverse = FALSE
+    outputType = Magnitude
+    shiftFrequencyCenter = TRUE
+    windowFunction = None
+    frequencyUnit = "Keep original"
+    autoUpdate = TRUE
+    preProcessOnly = FALSE
+    keepFFTSize = FALSE
+  }
+}
+module View2D {
+  internal  {
+    frame = "-131 -95 120 64"
+    moduleGroupName = "Showcase Fourier Scaling"
+    windows  {
+      window _default {
+        geometry = "1040 500 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View_F
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 3.15996527671814
+    lutWidth = 6.31993055343628
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module Switch2 {
+  internal  {
+    frame = "641 1941 128 72"
+    moduleGroupName = "Linearity Input"
+    showNetworkPanel = true
+    windows  {
+      window _automatic {
+        geometry = "1030 450 500 600"
+        sizeHint = "260 223"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Switch22
+    useRightInput = TRUE
+  }
+}
+module Arithmetic {
+  internal  {
+    frame = "-123 113 88 64"
+    moduleGroupName = "Showcase Fourier Scaling"
+    windows  {
+      window _default {
+        geometry = "312 407 613 493"
+        sizeHint = "613 493"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Logarithm
+    expression = "log10(1 + a)"
+    i1 = 0
+    i2 = 0
+    i3 = 0
+    i4 = 0
+    i5 = 0
+    i6 = 0
+    d1 = 0
+    d2 = 0
+    d3 = 0
+    d4 = 0
+    d5 = 0
+    d6 = 0
+    d7 = 0
+    d8 = 0
+    d9 = 0
+    d10 = 0
+    d11 = 0
+    d12 = 0
+    minValue = 0
+    maxValue = 1
+    setMinMaxValues = FALSE
+    dataType = int8
+    setDataType = FALSE
+    updateMode = AutoUpdate
+    applyMode = AutoApply
+    domainErrorHandling = ErrorMessage
+    numberOfInputs = 1
+    expressionComment = ""
+    scalarVariablesComment = ""
+  }
+}
+module FFT {
+  internal  {
+    frame = "237 989 56 56"
+    moduleGroupName = "Linearity Property"
+    windows  {
+      window _default {
+        geometry = "1316 535 260 287"
+        sizeHint = "260 287"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = FFT1
+    xDim = TRUE
+    yDim = TRUE
+    zDim = FALSE
+    cDim = FALSE
+    tDim = FALSE
+    uDim = FALSE
+    xDimSize = 128
+    yDimSize = 128
+    zDimSize = 1
+    cDimSize = 1
+    tDimSize = 1
+    uDimSize = 1
+    calculateInverse = FALSE
+    outputType = Magnitude
+    shiftFrequencyCenter = TRUE
+    windowFunction = None
+    frequencyUnit = "Keep original"
+    autoUpdate = TRUE
+    preProcessOnly = FALSE
+    keepFFTSize = FALSE
+  }
+}
+module Arithmetic {
+  internal  {
+    frame = "233 893 96 56"
+    moduleGroupName = "Linearity Property"
+    windows  {
+      window _default {
+        geometry = "591 187 577 511"
+        sizeHint = "577 511"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Arithmetic1
+    expression = "log10(1 + a)"
+    i1 = 0
+    i2 = 0
+    i3 = 0
+    i4 = 0
+    i5 = 0
+    i6 = 0
+    d1 = 0
+    d2 = 0
+    d3 = 0
+    d4 = 0
+    d5 = 0
+    d6 = 0
+    d7 = 0
+    d8 = 0
+    d9 = 0
+    d10 = 0
+    d11 = 0
+    d12 = 0
+    minValue = 0
+    maxValue = 1
+    setMinMaxValues = FALSE
+    dataType = int8
+    setDataType = FALSE
+    updateMode = AutoUpdate
+    applyMode = AutoApply
+    domainErrorHandling = ErrorMessage
+    numberOfInputs = 1
+    expressionComment = ""
+    scalarVariablesComment = ""
+  }
+}
+module MinMaxScan {
+  internal  {
+    frame = "237 797 104 56"
+    moduleGroupName = "Linearity Property"
+    windows  {
+      window _default {
+        geometry = "590 501 666 334"
+        sizeHint = "642 334"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = MinMaxScan1
+    updateMode = AutoUpdate
+    typeSelect = "Proposed Data Type"
+    preferredIntType = PreferUnsigned
+  }
+}
+module Arithmetic {
+  internal  {
+    frame = "857 885 96 56"
+    moduleGroupName = "Linearity Property"
+    windows  {
+      window _default {
+        geometry = "827 197 613 493"
+        sizeHint = "613 493"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Arithmetic2
+    expression = "log10(1 + a)"
+    i1 = 0
+    i2 = 0
+    i3 = 0
+    i4 = 0
+    i5 = 0
+    i6 = 0
+    d1 = 0
+    d2 = 0
+    d3 = 0
+    d4 = 0
+    d5 = 0
+    d6 = 0
+    d7 = 0
+    d8 = 0
+    d9 = 0
+    d10 = 0
+    d11 = 0
+    d12 = 0
+    minValue = 0
+    maxValue = 1
+    setMinMaxValues = FALSE
+    dataType = int8
+    setDataType = FALSE
+    updateMode = AutoUpdate
+    applyMode = AutoApply
+    domainErrorHandling = ErrorMessage
+    numberOfInputs = 1
+    expressionComment = ""
+    scalarVariablesComment = ""
+  }
+}
+module MinMaxScan {
+  internal  {
+    frame = "849 789 112 56"
+    moduleGroupName = "Linearity Property"
+    windows  {
+      window _default {
+        geometry = "590 501 666 334"
+        sizeHint = "642 334"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = MinMaxScan3
+    updateMode = AutoUpdate
+    typeSelect = "Proposed Data Type"
+    preferredIntType = PreferUnsigned
+  }
+}
+module View2D {
+  internal  {
+    frame = "229 717 120 56"
+    moduleGroupName = "Linearity Property"
+    windows  {
+      window _default {
+        geometry = "55 157 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D4
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 3.21693682670593
+    lutWidth = 6.43387365341187
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module View2D {
+  internal  {
+    frame = "845 701 120 56"
+    moduleGroupName = "Linearity Property"
+    windows  {
+      window _default {
+        geometry = "560 157 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D5
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 3.34874320030212
+    lutWidth = 6.69748640060425
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module Switch2 {
+  internal  {
+    frame = "345 1933 128 72"
+    moduleGroupName = "Linearity Input"
+    showNetworkPanel = true
+    windows  {
+      window _automatic {
+        geometry = "1030 450 500 600"
+        sizeHint = "260 223"
+        wasOpen = no
+      }
+      window _default {
+        geometry = "1173 705 215 90"
+        sizeHint = "215 90"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Switch21
+    useRightInput = TRUE
+  }
+}
+module MinMaxScan {
+  internal  {
+    frame = "-143 29 112 56"
+    moduleGroupName = "Showcase Fourier Scaling"
+    windows  {
+      window _default {
+        geometry = "590 501 506 321"
+        sizeHint = "481 321"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = MinMaxScan2
+    updateMode = AutoUpdate
+    typeSelect = "Proposed Data Type"
+    preferredIntType = PreferUnsigned
+  }
+}
+module PythonArithmetic {
+  internal  {
+    frame = "265 2061 128 56"
+    moduleGroupName = "Linearity Input"
+    windows  {
+      window _default {
+        geometry = "517 229 404 497"
+        sizeHint = "404 497"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = PythonArithmetic
+    calculateOutputSubImage = "X_PERIOD = 16.
+Y_PERIOD = 0.
+# Set X_PERIOD to 0 for horizontal zebra. Vice-versa you get vertical slices if Y_PERIOD is zero.
+
+# squeeze removes the (u,t,c,z) dimensions
+out = numpy.squeeze(out)
+
+# create a pattern using cos and sin for vertical/horizontal stripes
+for y in range(0, extent):
+  yFactor = 1 + math.sin(y / Y_PERIOD * math.pi) if Y_PERIOD > 0. else 1.
+  for x in range(0, extent):
+    xFactor = 1 + math.cos(x / X_PERIOD * math.pi) if X_PERIOD > 0. else 1.
+    out[y, x] = 255. * yFactor * xFactor * 0.5
+"
+    calculateInputSubImageBox = ""
+    calculateOutputImageProperties = "import math
+# Setup an output image of size 128x128, with one slice and values on the range of [0, 255]
+extent = 128
+outImage.setDataType(outImage.MLfloatType)
+outImage.setImageExtent(extent,extent,1)
+outImage.setPageExtent(extent,extent,1,1,1,1)
+outImage.setMinVoxelValue(0.)
+outImage.setMaxVoxelValue(255.)
+"
+    numberOfInputs = 0
+    doubleConstant0 = 0
+    doubleConstant1 = 0
+    doubleConstant2 = 0
+    doubleConstant3 = 0
+    doubleConstant4 = 0
+    doubleConstant5 = 0
+    doubleConstantName0 = ""
+    doubleConstantName1 = ""
+    doubleConstantName2 = ""
+    doubleConstantName3 = ""
+    doubleConstantName4 = ""
+    doubleConstantName5 = ""
+    intConstant0 = 0
+    intConstant1 = 0
+    intConstant2 = 0
+    intConstant3 = 0
+    intConstant4 = 0
+    intConstant5 = 0
+    intConstantName0 = ""
+    intConstantName1 = ""
+    intConstantName2 = ""
+    intConstantName3 = ""
+    intConstantName4 = ""
+    intConstantName5 = ""
+    setMinMaxValues = TRUE
+    minVoxelValue = 0
+    maxVoxelValue = 255
+    setDataType = TRUE
+    dataType = "unsigned int8"
+    inputDataType0 = "output type"
+    inputDataType1 = "output type"
+    inputDataType2 = "output type"
+    inputDataType3 = "output type"
+    inputDataType4 = "output type"
+    inputHandling0 = AllowAny
+    inputHandling1 = AllowAny
+    inputHandling2 = AllowAny
+    inputHandling3 = AllowAny
+    inputHandling4 = AllowAny
+  }
+}
+module PythonArithmetic {
+  internal  {
+    frame = "405 2061 136 56"
+    moduleGroupName = "Linearity Input"
+    windows  {
+      window _default {
+        geometry = "517 229 404 497"
+        sizeHint = "404 497"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = PythonArithmetic1
+    calculateOutputSubImage = "X_PERIOD = 4.
+Y_PERIOD = 0.
+# Set X_PERIOD to 0 for horizontal zebra. Vice-versa you get vertical slices if Y_PERIOD is zero.
+
+# squeeze removes the (u,t,c,z) dimensions
+out = numpy.squeeze(out)
+
+# create a pattern using cos and sin for vertical/horizontal stripes
+for y in range(0, extent):
+  yFactor = 1 + math.sin(y / Y_PERIOD * math.pi) if Y_PERIOD > 0. else 1.
+  for x in range(0, extent):
+    xFactor = 1 + math.cos(x / X_PERIOD * math.pi) if X_PERIOD > 0. else 1.
+    out[y, x] = 255. * yFactor * xFactor * 0.5
+"
+    calculateInputSubImageBox = ""
+    calculateOutputImageProperties = "import math
+# Setup an output image of size 128x128, with one slice and values on the range of [0, 255]
+extent = 128
+outImage.setDataType(outImage.MLfloatType)
+outImage.setImageExtent(extent,extent,1)
+outImage.setPageExtent(extent,extent,1,1,1,1)
+outImage.setMinVoxelValue(0.)
+outImage.setMaxVoxelValue(255.)
+"
+    numberOfInputs = 0
+    doubleConstant0 = 0
+    doubleConstant1 = 0
+    doubleConstant2 = 0
+    doubleConstant3 = 0
+    doubleConstant4 = 0
+    doubleConstant5 = 0
+    doubleConstantName0 = ""
+    doubleConstantName1 = ""
+    doubleConstantName2 = ""
+    doubleConstantName3 = ""
+    doubleConstantName4 = ""
+    doubleConstantName5 = ""
+    intConstant0 = 0
+    intConstant1 = 0
+    intConstant2 = 0
+    intConstant3 = 0
+    intConstant4 = 0
+    intConstant5 = 0
+    intConstantName0 = ""
+    intConstantName1 = ""
+    intConstantName2 = ""
+    intConstantName3 = ""
+    intConstantName4 = ""
+    intConstantName5 = ""
+    setMinMaxValues = TRUE
+    minVoxelValue = 0
+    maxVoxelValue = 255
+    setDataType = TRUE
+    dataType = "unsigned int8"
+    inputDataType0 = "output type"
+    inputDataType1 = "output type"
+    inputDataType2 = "output type"
+    inputDataType3 = "output type"
+    inputDataType4 = "output type"
+    inputHandling0 = AllowAny
+    inputHandling1 = AllowAny
+    inputHandling2 = AllowAny
+    inputHandling3 = AllowAny
+    inputHandling4 = AllowAny
+  }
+}
+module PythonArithmetic {
+  internal  {
+    frame = "557 2061 136 56"
+    moduleGroupName = "Linearity Input"
+    windows  {
+      window _default {
+        geometry = "517 229 404 497"
+        sizeHint = "404 497"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = PythonArithmetic2
+    calculateOutputSubImage = "X_PERIOD = 0.
+Y_PERIOD = 16.
+# Set X_PERIOD to 0 for horizontal zebra. Vice-versa you get vertical slices if Y_PERIOD is zero.
+
+# squeeze removes the (u,t,c,z) dimensions
+out = numpy.squeeze(out)
+
+# create a pattern using cos and sin for vertical/horizontal stripes
+for y in range(0, extent):
+  yFactor = 1 + math.sin(y / Y_PERIOD * math.pi) if Y_PERIOD > 0. else 1.
+  for x in range(0, extent):
+    xFactor = 1 + math.cos(x / X_PERIOD * math.pi) if X_PERIOD > 0. else 1.
+    out[y, x] = 255. * yFactor * xFactor * 0.5
+"
+    calculateInputSubImageBox = ""
+    calculateOutputImageProperties = "import math
+# Setup an output image of size 128x128, with one slice and values on the range of [0, 255]
+extent = 128
+outImage.setDataType(outImage.MLfloatType)
+outImage.setImageExtent(extent,extent,1)
+outImage.setPageExtent(extent,extent,1,1,1,1)
+outImage.setMinVoxelValue(0.)
+outImage.setMaxVoxelValue(255.)
+"
+    numberOfInputs = 0
+    doubleConstant0 = 0
+    doubleConstant1 = 0
+    doubleConstant2 = 0
+    doubleConstant3 = 0
+    doubleConstant4 = 0
+    doubleConstant5 = 0
+    doubleConstantName0 = ""
+    doubleConstantName1 = ""
+    doubleConstantName2 = ""
+    doubleConstantName3 = ""
+    doubleConstantName4 = ""
+    doubleConstantName5 = ""
+    intConstant0 = 0
+    intConstant1 = 0
+    intConstant2 = 0
+    intConstant3 = 0
+    intConstant4 = 0
+    intConstant5 = 0
+    intConstantName0 = ""
+    intConstantName1 = ""
+    intConstantName2 = ""
+    intConstantName3 = ""
+    intConstantName4 = ""
+    intConstantName5 = ""
+    setMinMaxValues = TRUE
+    minVoxelValue = 0
+    maxVoxelValue = 255
+    setDataType = TRUE
+    dataType = "unsigned int8"
+    inputDataType0 = "output type"
+    inputDataType1 = "output type"
+    inputDataType2 = "output type"
+    inputDataType3 = "output type"
+    inputDataType4 = "output type"
+    inputHandling0 = AllowAny
+    inputHandling1 = AllowAny
+    inputHandling2 = AllowAny
+    inputHandling3 = AllowAny
+    inputHandling4 = AllowAny
+  }
+}
+module PythonArithmetic {
+  internal  {
+    frame = "701 2061 136 56"
+    moduleGroupName = "Linearity Input"
+    windows  {
+      window _default {
+        geometry = "1345 545 930 508"
+        sizeHint = "406 508"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = PythonArithmetic3
+    calculateOutputSubImage = "X_PERIOD = 0.
+Y_PERIOD = 4.
+# Set X_PERIOD to 0 for horizontal zebra. Vice-versa you get vertical slices if Y_PERIOD is zero.
+
+# squeeze removes the (u,t,c,z) dimensions so we can do out[y, x]
+out = numpy.squeeze(out)
+
+# create a pattern using cos and sin for vertical/horizontal stripes
+for y in range(0, extent):
+  yFactor = 1 + math.sin(y / Y_PERIOD * math.pi) if Y_PERIOD > 0. else 1.
+  for x in range(0, extent):
+    xFactor = 1 + math.cos(x / X_PERIOD * math.pi) if X_PERIOD > 0. else 1.
+    out[y, x] = 255. * yFactor * xFactor * 0.5
+"
+    calculateInputSubImageBox = ""
+    calculateOutputImageProperties = "import math
+# Setup an output image of size 128x128, with one slice and values on the range of [0, 255]
+extent = 128
+outImage.setDataType(outImage.MLfloatType)
+outImage.setImageExtent(extent,extent,1)
+outImage.setPageExtent(extent,extent,1,1,1,1)
+outImage.setMinVoxelValue(0.)
+outImage.setMaxVoxelValue(255.)
+"
+    numberOfInputs = 0
+    doubleConstant0 = 0
+    doubleConstant1 = 0
+    doubleConstant2 = 0
+    doubleConstant3 = 0
+    doubleConstant4 = 0
+    doubleConstant5 = 0
+    doubleConstantName0 = ""
+    doubleConstantName1 = ""
+    doubleConstantName2 = ""
+    doubleConstantName3 = ""
+    doubleConstantName4 = ""
+    doubleConstantName5 = ""
+    intConstant0 = 0
+    intConstant1 = 0
+    intConstant2 = 0
+    intConstant3 = 0
+    intConstant4 = 0
+    intConstant5 = 0
+    intConstantName0 = ""
+    intConstantName1 = ""
+    intConstantName2 = ""
+    intConstantName3 = ""
+    intConstantName4 = ""
+    intConstantName5 = ""
+    setMinMaxValues = TRUE
+    minVoxelValue = 0
+    maxVoxelValue = 255
+    setDataType = TRUE
+    dataType = "unsigned int8"
+    inputDataType0 = "output type"
+    inputDataType1 = "output type"
+    inputDataType2 = "output type"
+    inputDataType3 = "output type"
+    inputDataType4 = "output type"
+    inputHandling0 = AllowAny
+    inputHandling1 = AllowAny
+    inputHandling2 = AllowAny
+    inputHandling3 = AllowAny
+    inputHandling4 = AllowAny
+  }
+}
+module Switch2 {
+  internal  {
+    frame = "-204 312 128 72"
+    moduleGroupName = "Showcase Fourier Scaling"
+    showNetworkPanel = true
+    windows  {
+      window _automatic {
+        geometry = "1030 450 500 600"
+        sizeHint = "260 223"
+        wasOpen = no
+      }
+      window _default {
+        geometry = "909 1017 215 90"
+        sizeHint = "215 90"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Switch23
+    useRightInput = FALSE
+  }
+}
+module PythonArithmetic {
+  internal  {
+    frame = "-280 408 136 56"
+    moduleGroupName = "Showcase Fourier Scaling"
+    windows  {
+      window _default {
+        geometry = "322 219 404 497"
+        sizeHint = "404 497"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = PythonArithmetic6
+    calculateOutputSubImage = "a = 16.
+
+
+# squeeze removes the (u,t,c,z) dimensions
+out = numpy.squeeze(out)
+
+for x in range(0, extent):
+  xFactor = 1 + math.sin((x/a) * math.pi) if a > 0. else 1.
+  out[:, x] = xFactor * 255. * 0.5
+"
+    calculateInputSubImageBox = ""
+    calculateOutputImageProperties = "import math
+# Setup an output image of size 128x128, with one slice and values on the range of [0, 255]
+extent = 128
+outImage.setDataType(outImage.MLfloatType)
+outImage.setImageExtent(extent,extent,1)
+outImage.setPageExtent(extent,extent,1,1,1,1)
+outImage.setMinVoxelValue(0.)
+outImage.setMaxVoxelValue(255.)
+"
+    numberOfInputs = 0
+    doubleConstant0 = 0
+    doubleConstant1 = 0
+    doubleConstant2 = 0
+    doubleConstant3 = 0
+    doubleConstant4 = 0
+    doubleConstant5 = 0
+    doubleConstantName0 = ""
+    doubleConstantName1 = ""
+    doubleConstantName2 = ""
+    doubleConstantName3 = ""
+    doubleConstantName4 = ""
+    doubleConstantName5 = ""
+    intConstant0 = 0
+    intConstant1 = 0
+    intConstant2 = 0
+    intConstant3 = 0
+    intConstant4 = 0
+    intConstant5 = 0
+    intConstantName0 = ""
+    intConstantName1 = ""
+    intConstantName2 = ""
+    intConstantName3 = ""
+    intConstantName4 = ""
+    intConstantName5 = ""
+    setMinMaxValues = TRUE
+    minVoxelValue = 0
+    maxVoxelValue = 255
+    setDataType = TRUE
+    dataType = "unsigned int8"
+    inputDataType0 = "output type"
+    inputDataType1 = "output type"
+    inputDataType2 = "output type"
+    inputDataType3 = "output type"
+    inputDataType4 = "output type"
+    inputHandling0 = AllowAny
+    inputHandling1 = AllowAny
+    inputHandling2 = AllowAny
+    inputHandling3 = AllowAny
+    inputHandling4 = AllowAny
+  }
+}
+module PythonArithmetic {
+  internal  {
+    frame = "-136 408 136 56"
+    moduleGroupName = "Showcase Fourier Scaling"
+    windows  {
+      window _default {
+        geometry = "740 219 404 497"
+        sizeHint = "404 497"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = PythonArithmetic7
+    calculateOutputSubImage = "a = 8.    
+
+# squeeze removes the (u,t,c,z) dimensions
+out = numpy.squeeze(out)
+
+for x in range(0, extent):
+  xFactor = 1 + math.sin((x/a) * math.pi) if a > 0. else 1.
+  out[:, x] = xFactor * 255. * 0.5
+"
+    calculateInputSubImageBox = ""
+    calculateOutputImageProperties = "import math
+# Setup an output image of size 128x128, with one slice and values on the range of [0, 255]
+extent = 128
+outImage.setDataType(outImage.MLfloatType)
+outImage.setImageExtent(extent,extent,1)
+outImage.setPageExtent(extent,extent,1,1,1,1)
+outImage.setMinVoxelValue(0.)
+outImage.setMaxVoxelValue(255.)
+"
+    numberOfInputs = 0
+    doubleConstant0 = 0
+    doubleConstant1 = 0
+    doubleConstant2 = 0
+    doubleConstant3 = 0
+    doubleConstant4 = 0
+    doubleConstant5 = 0
+    doubleConstantName0 = ""
+    doubleConstantName1 = ""
+    doubleConstantName2 = ""
+    doubleConstantName3 = ""
+    doubleConstantName4 = ""
+    doubleConstantName5 = ""
+    intConstant0 = 0
+    intConstant1 = 0
+    intConstant2 = 0
+    intConstant3 = 0
+    intConstant4 = 0
+    intConstant5 = 0
+    intConstantName0 = ""
+    intConstantName1 = ""
+    intConstantName2 = ""
+    intConstantName3 = ""
+    intConstantName4 = ""
+    intConstantName5 = ""
+    setMinMaxValues = TRUE
+    minVoxelValue = 0
+    maxVoxelValue = 255
+    setDataType = TRUE
+    dataType = "unsigned int8"
+    inputDataType0 = "output type"
+    inputDataType1 = "output type"
+    inputDataType2 = "output type"
+    inputDataType3 = "output type"
+    inputDataType4 = "output type"
+    inputHandling0 = AllowAny
+    inputHandling1 = AllowAny
+    inputHandling2 = AllowAny
+    inputHandling3 = AllowAny
+    inputHandling4 = AllowAny
+  }
+}
+module View2D {
+  internal  {
+    frame = "-315 -95 120 64"
+    moduleGroupName = "Showcase Fourier Scaling"
+    windows  {
+      window _default {
+        geometry = "124 278 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View_f
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 127.5
+    lutWidth = 255
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module FFT {
+  internal  {
+    frame = "-647 1085 64 56"
+    moduleGroupName = "Multiplication and Convolution"
+    windows  {
+      window _default {
+        geometry = "560 234 279 304"
+        sizeHint = "279 304"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = FFT8
+    xDim = TRUE
+    yDim = TRUE
+    zDim = FALSE
+    cDim = FALSE
+    tDim = FALSE
+    uDim = FALSE
+    xDimSize = 128
+    yDimSize = 128
+    zDimSize = 1
+    cDimSize = 1
+    tDimSize = 1
+    uDimSize = 1
+    calculateInverse = FALSE
+    outputType = Complex
+    shiftFrequencyCenter = TRUE
+    windowFunction = None
+    frequencyUnit = "Keep original"
+    autoUpdate = TRUE
+    preProcessOnly = FALSE
+    keepFFTSize = TRUE
+  }
+}
+module PythonArithmetic {
+  internal  {
+    frame = "-563 1189 136 56"
+    moduleGroupName = "Multiplication and Convolution"
+    windows  {
+      window _default {
+        geometry = "517 229 404 497"
+        sizeHint = "404 497"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = PythonArithmetic11
+    calculateOutputSubImage = "import math
+
+# This is the period of the sinusoid
+a = 8.    
+b = 22.
+
+# squeeze removes the (u,t,c,z) dimensions
+out = numpy.squeeze(out)
+
+# Assign a 1x128 (1D) function using sin.
+
+# Modify the code such that the sinusoid's range [-1.0, 1.0] maps to [0, 255]
+for y in range(0, extent):
+  yFactor = 1 + math.sin((y/b) * math.pi - 0.4 * math.pi)
+  for x in range(0, extent):
+    xFactor = 1 + math.sin((x/a) * math.pi - 0.2 * math.pi)
+    out[y, x] = yFactor * xFactor * 255. * 0.5 * 0.5"
+    calculateInputSubImageBox = ""
+    calculateOutputImageProperties = "# Setup an output image of size 128x128, with one slice and values of float on the range of [0, 255]
+extent = 128
+outImage.setDataType(outImage.MLfloatType)
+outImage.setImageExtent(extent,extent,1)
+outImage.setPageExtent(extent,extent,1,1,1,1)
+outImage.setMinVoxelValue(0.)
+outImage.setMaxVoxelValue(255.)
+"
+    numberOfInputs = 0
+    doubleConstant0 = 0
+    doubleConstant1 = 0
+    doubleConstant2 = 0
+    doubleConstant3 = 0
+    doubleConstant4 = 0
+    doubleConstant5 = 0
+    doubleConstantName0 = ""
+    doubleConstantName1 = ""
+    doubleConstantName2 = ""
+    doubleConstantName3 = ""
+    doubleConstantName4 = ""
+    doubleConstantName5 = ""
+    intConstant0 = 0
+    intConstant1 = 0
+    intConstant2 = 0
+    intConstant3 = 0
+    intConstant4 = 0
+    intConstant5 = 0
+    intConstantName0 = ""
+    intConstantName1 = ""
+    intConstantName2 = ""
+    intConstantName3 = ""
+    intConstantName4 = ""
+    intConstantName5 = ""
+    setMinMaxValues = TRUE
+    minVoxelValue = 0
+    maxVoxelValue = 255
+    setDataType = TRUE
+    dataType = float
+    inputDataType0 = "output type"
+    inputDataType1 = "output type"
+    inputDataType2 = "output type"
+    inputDataType3 = "output type"
+    inputDataType4 = "output type"
+    inputHandling0 = AllowAny
+    inputHandling1 = AllowAny
+    inputHandling2 = AllowAny
+    inputHandling3 = AllowAny
+    inputHandling4 = AllowAny
+  }
+}
+module View2D {
+  internal  {
+    frame = "-435 701 120 56"
+    moduleGroupName = "Multiplication and Convolution"
+    windows  {
+      window _default {
+        geometry = "664 192 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D12
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 127.5
+    lutWidth = 255
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module View2D {
+  internal  {
+    frame = "-627 701 120 56"
+    moduleGroupName = "Multiplication and Convolution"
+    windows  {
+      window _default {
+        geometry = "156 143 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+      window Settings {
+        geometry = "574 228 317 499"
+        sizeHint = "290 499"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D13
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 127.5
+    lutWidth = 255
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module FFT {
+  internal  {
+    frame = "-543 1085 64 56"
+    moduleGroupName = "Multiplication and Convolution"
+    windows  {
+      window _default {
+        geometry = "687 229 279 304"
+        sizeHint = "279 304"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = FFT9
+    xDim = TRUE
+    yDim = TRUE
+    zDim = FALSE
+    cDim = FALSE
+    tDim = FALSE
+    uDim = FALSE
+    xDimSize = 128
+    yDimSize = 128
+    zDimSize = 1
+    cDimSize = 1
+    tDimSize = 1
+    uDimSize = 1
+    calculateInverse = FALSE
+    outputType = Complex
+    shiftFrequencyCenter = TRUE
+    windowFunction = None
+    frequencyUnit = "Keep original"
+    autoUpdate = TRUE
+    preProcessOnly = FALSE
+    keepFFTSize = TRUE
+  }
+}
+module FFT {
+  internal  {
+    frame = "489 1389 64 56"
+    moduleGroupName = "Linearity Property"
+    windows  {
+      window _default {
+        geometry = "1150 596 279 304"
+        sizeHint = "279 304"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = FFTofH
+    xDim = TRUE
+    yDim = TRUE
+    zDim = FALSE
+    cDim = FALSE
+    tDim = FALSE
+    uDim = FALSE
+    xDimSize = 128
+    yDimSize = 128
+    zDimSize = 1
+    cDimSize = 1
+    tDimSize = 1
+    uDimSize = 1
+    calculateInverse = FALSE
+    outputType = Complex
+    shiftFrequencyCenter = TRUE
+    windowFunction = None
+    frequencyUnit = "Keep original"
+    autoUpdate = TRUE
+    preProcessOnly = FALSE
+    keepFFTSize = TRUE
+  }
+}
+module FFT {
+  internal  {
+    frame = "565 1381 72 72"
+    moduleGroupName = "Linearity Property"
+    windows  {
+      window _default {
+        geometry = "1161 596 279 304"
+        sizeHint = "279 304"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = FFTofG
+    xDim = TRUE
+    yDim = TRUE
+    zDim = FALSE
+    cDim = FALSE
+    tDim = FALSE
+    uDim = FALSE
+    xDimSize = 128
+    yDimSize = 128
+    zDimSize = 1
+    cDimSize = 1
+    tDimSize = 1
+    uDimSize = 1
+    calculateInverse = FALSE
+    outputType = Complex
+    shiftFrequencyCenter = TRUE
+    windowFunction = None
+    frequencyUnit = "Keep original"
+    autoUpdate = TRUE
+    preProcessOnly = FALSE
+    keepFFTSize = TRUE
+  }
+}
+module Arithmetic {
+  internal  {
+    frame = "-1389 887 96 56"
+    moduleGroupName = SeparableFunctions
+    windows  {
+      window _default {
+        geometry = "312 407 613 493"
+        sizeHint = "613 493"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Arithmetic3
+    expression = "log10(1 + a)"
+    i1 = 0
+    i2 = 0
+    i3 = 0
+    i4 = 0
+    i5 = 0
+    i6 = 0
+    d1 = 0
+    d2 = 0
+    d3 = 0
+    d4 = 0
+    d5 = 0
+    d6 = 0
+    d7 = 0
+    d8 = 0
+    d9 = 0
+    d10 = 0
+    d11 = 0
+    d12 = 0
+    minValue = 0
+    maxValue = 1
+    setMinMaxValues = FALSE
+    dataType = int8
+    setDataType = FALSE
+    updateMode = AutoUpdate
+    applyMode = AutoApply
+    domainErrorHandling = ErrorMessage
+    numberOfInputs = 1
+    expressionComment = ""
+    scalarVariablesComment = ""
+  }
+}
+module MinMaxScan {
+  internal  {
+    frame = "-1389 807 112 56"
+    moduleGroupName = SeparableFunctions
+    windows  {
+      window _default {
+        geometry = "589 501 506 321"
+        sizeHint = "481 321"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = MinMaxScan4
+    updateMode = AutoUpdate
+    typeSelect = "Proposed Data Type"
+    preferredIntType = PreferUnsigned
+  }
+}
+module PythonArithmetic {
+  internal  {
+    frame = "-1350 1180 136 56"
+    moduleGroupName = SeparableFunctions
+    windows  {
+      window _default {
+        geometry = "421 403 928 497"
+        sizeHint = "404 497"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = PythonArithmetic8
+    calculateOutputSubImage = "import math
+
+# This is the period of the sinusoid
+a = 16.    
+b = 32
+
+# squeeze removes the (u,t,c,z) dimensions
+out = numpy.squeeze(out)
+
+# Assign a 1x128 (1D) function using sin.
+
+# Modify the code such that the sinusoid's range [-1.0, 1.0] maps to [0, 255]
+for y in range(0, extent):
+  yFactor = math.cos((y/b) * math.pi)
+  for x in range(0, extent):
+    xFactor = math.sin((x/a) * math.pi)
+    out[y, x] = ((1 + yFactor * xFactor) / 2.0) * 255. 
+"
+    calculateInputSubImageBox = ""
+    calculateOutputImageProperties = "# Setup an output image of size 128x128, with one slice and values on the range of [0, 255]
+extent = 128
+outImage.setImageExtent(extent, extent,1)
+outImage.setPageExtent(extent,extent,1)
+outImage.setMinVoxelValue(0.)
+outImage.setMaxVoxelValue(255.)
+"
+    numberOfInputs = 0
+    doubleConstant0 = 0
+    doubleConstant1 = 0
+    doubleConstant2 = 0
+    doubleConstant3 = 0
+    doubleConstant4 = 0
+    doubleConstant5 = 0
+    doubleConstantName0 = ""
+    doubleConstantName1 = ""
+    doubleConstantName2 = ""
+    doubleConstantName3 = ""
+    doubleConstantName4 = ""
+    doubleConstantName5 = ""
+    intConstant0 = 0
+    intConstant1 = 0
+    intConstant2 = 0
+    intConstant3 = 0
+    intConstant4 = 0
+    intConstant5 = 0
+    intConstantName0 = ""
+    intConstantName1 = ""
+    intConstantName2 = ""
+    intConstantName3 = ""
+    intConstantName4 = ""
+    intConstantName5 = ""
+    setMinMaxValues = TRUE
+    minVoxelValue = 0
+    maxVoxelValue = 255
+    setDataType = TRUE
+    dataType = float
+    inputDataType0 = "output type"
+    inputDataType1 = "output type"
+    inputDataType2 = "output type"
+    inputDataType3 = "output type"
+    inputDataType4 = "output type"
+    inputHandling0 = AllowAny
+    inputHandling1 = AllowAny
+    inputHandling2 = AllowAny
+    inputHandling3 = AllowAny
+    inputHandling4 = AllowAny
+  }
+}
+module FFT {
+  internal  {
+    frame = "-1238 1057 72 56"
+    moduleGroupName = SeparableFunctions
+    windows  {
+      window _default {
+        geometry = "1075 538 260 287"
+        sizeHint = "260 287"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = FFT14
+    xDim = TRUE
+    yDim = TRUE
+    zDim = FALSE
+    cDim = FALSE
+    tDim = FALSE
+    uDim = FALSE
+    xDimSize = 128
+    yDimSize = 128
+    zDimSize = 1
+    cDimSize = 1
+    tDimSize = 1
+    uDimSize = 1
+    calculateInverse = FALSE
+    outputType = Magnitude
+    shiftFrequencyCenter = TRUE
+    windowFunction = None
+    frequencyUnit = "Keep original"
+    autoUpdate = TRUE
+    preProcessOnly = FALSE
+    keepFFTSize = TRUE
+  }
+}
+module View2D {
+  internal  {
+    frame = "-1253 715 120 56"
+    moduleGroupName = SeparableFunctions
+    windows  {
+      window _default {
+        geometry = "519 277 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D6
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 3.15996527671814
+    lutWidth = 6.31993055343628
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module Arithmetic {
+  internal  {
+    frame = "-1253 887 96 56"
+    moduleGroupName = SeparableFunctions
+    windows  {
+      window _default {
+        geometry = "827 406 613 494"
+        sizeHint = "613 493"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Arithmetic4
+    expression = "log10(1 + a)"
+    i1 = 0
+    i2 = 0
+    i3 = 0
+    i4 = 0
+    i5 = 0
+    i6 = 0
+    d1 = 0
+    d2 = 0
+    d3 = 0
+    d4 = 0
+    d5 = 0
+    d6 = 0
+    d7 = 0
+    d8 = 0
+    d9 = 0
+    d10 = 0
+    d11 = 0
+    d12 = 0
+    minValue = 0
+    maxValue = 1
+    setMinMaxValues = FALSE
+    dataType = int8
+    setDataType = FALSE
+    updateMode = AutoUpdate
+    applyMode = AutoApply
+    domainErrorHandling = ErrorMessage
+    numberOfInputs = 1
+    expressionComment = ""
+    scalarVariablesComment = ""
+  }
+}
+module MinMaxScan {
+  internal  {
+    frame = "-1253 807 112 56"
+    moduleGroupName = SeparableFunctions
+    windows  {
+      window _default {
+        geometry = "590 501 506 321"
+        sizeHint = "481 321"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = MinMaxScan5
+    updateMode = AutoUpdate
+    typeSelect = "Proposed Data Type"
+    preferredIntType = PreferUnsigned
+  }
+}
+module View2D {
+  internal  {
+    frame = "-1566 1057 136 64"
+    moduleGroupName = SeparableFunctions
+    windows  {
+      window _default {
+        geometry = "250 135 400 398"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+      window Settings {
+        geometry = "1152 499 278 502"
+        sizeHint = "256 502"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ViewSpatialDomain
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 127.5
+    lutWidth = 255
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module PythonArithmetic {
+  internal  {
+    frame = "-1414 1057 168 64"
+    moduleGroupName = SeparableFunctions
+    windows  {
+      window _default {
+        geometry = "456 90 608 631"
+        sizeHint = "524 497"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ShowSeperableProperty
+    calculateOutputSubImage = "*import numpy as np
+
+
+# squeeze removes the (u,t,c,z) dimensions
+out = np.squeeze(out)
+in0 = np.squeeze(in0)
+out = np.zeros((extent, extent))
+
+# We need to tell np to use complex numbers as datatype here, since our intermediary results are complex numbers
+FT_result = np.zeros((extent, extent), dtype=np.complex)
+
+# Seperability of FT implies we are be able to compute our 2D FT using two passes: 
+# 1. First along the columns, and
+# 2. Then the rows of the **intermediary result** (or vice-versa)
+
+
+# Modify the code below to compute the FFT **along the rows**
+FT_result = np.fft.fft(in0[:, :],axis=0)
+  
+# Modify the code below to compute the FFT **along the columns**
+FT_result = np.fft.fft(FT_result[:, :],axis=1) 
+
+
+# Finally, we need to shift the FT coefficients to the center for easier viewing. 
+# (This is equivalent to selecting "Shift frequency center" in the FFT module)
+
+out = np.fft.fftshift(FT_result)
+ 
+# And compute the absolute value of the complex numbers
+out = np.abs(out)*"
+    calculateInputSubImageBox = ""
+    calculateOutputImageProperties = "# Setup an output image of size 128x128, with one slice and values on the range of [0, 255]
+extent = 128
+outImage.setImageExtent(extent, extent,1)
+outImage.setPageExtent(extent,extent,1)
+outImage.setMinVoxelValue(0.)
+outImage.setMaxVoxelValue(255.)
+"
+    numberOfInputs = 1
+    doubleConstant0 = 0
+    doubleConstant1 = 0
+    doubleConstant2 = 0
+    doubleConstant3 = 0
+    doubleConstant4 = 0
+    doubleConstant5 = 0
+    doubleConstantName0 = ""
+    doubleConstantName1 = ""
+    doubleConstantName2 = ""
+    doubleConstantName3 = ""
+    doubleConstantName4 = ""
+    doubleConstantName5 = ""
+    intConstant0 = 0
+    intConstant1 = 0
+    intConstant2 = 0
+    intConstant3 = 0
+    intConstant4 = 0
+    intConstant5 = 0
+    intConstantName0 = ""
+    intConstantName1 = ""
+    intConstantName2 = ""
+    intConstantName3 = ""
+    intConstantName4 = ""
+    intConstantName5 = ""
+    setMinMaxValues = TRUE
+    minVoxelValue = 0
+    maxVoxelValue = 255
+    setDataType = TRUE
+    dataType = float
+    inputDataType0 = "output type"
+    inputDataType1 = "input type"
+    inputDataType2 = "output type"
+    inputDataType3 = "output type"
+    inputDataType4 = "output type"
+    inputHandling0 = Invalidate
+    inputHandling1 = Invalidate
+    inputHandling2 = AllowAny
+    inputHandling3 = AllowAny
+    inputHandling4 = AllowAny
+  }
+}
+module View2D {
+  internal  {
+    frame = "-1389 715 120 56"
+    moduleGroupName = SeparableFunctions
+    windows  {
+      window _default {
+        geometry = "837 124 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D3
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 3.15996527671814
+    lutWidth = 6.31993055343628
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module PythonArithmetic {
+  internal  {
+    frame = "-723 1189 136 56"
+    moduleGroupName = "Multiplication and Convolution"
+    windows  {
+      window _default {
+        geometry = "517 229 404 497"
+        sizeHint = "404 497"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = PythonArithmetic10
+    calculateOutputSubImage = "*# Define your NxN kernel here. Don't forget to suitably set the output datatype!
+# If you do not know what to do, look up some "Image Processing Filter Kernels" or try to find some of the 
+# filters that the `Convolution` module defines.
+mean_kernel = numpy.full((25, 25), 1/625)
+
+
+
+out = mean_kernel
+
+*"
+    calculateInputSubImageBox = ""
+    calculateOutputImageProperties = "import math
+# Define the size of your kernel here.
+N = 25
+outImage.setImageExtent(N,N,1)
+outImage.setPageExtent(N,N,1,1)
+outImage.setMinVoxelValue(0.)
+outImage.setMaxVoxelValue(255.)
+"
+    numberOfInputs = 0
+    doubleConstant0 = 0
+    doubleConstant1 = 0
+    doubleConstant2 = 0
+    doubleConstant3 = 0
+    doubleConstant4 = 0
+    doubleConstant5 = 0
+    doubleConstantName0 = ""
+    doubleConstantName1 = ""
+    doubleConstantName2 = ""
+    doubleConstantName3 = ""
+    doubleConstantName4 = ""
+    doubleConstantName5 = ""
+    intConstant0 = 0
+    intConstant1 = 0
+    intConstant2 = 0
+    intConstant3 = 0
+    intConstant4 = 0
+    intConstant5 = 0
+    intConstantName0 = ""
+    intConstantName1 = ""
+    intConstantName2 = ""
+    intConstantName3 = ""
+    intConstantName4 = ""
+    intConstantName5 = ""
+    setMinMaxValues = TRUE
+    minVoxelValue = 0
+    maxVoxelValue = 255
+    setDataType = TRUE
+    dataType = float
+    inputDataType0 = "output type"
+    inputDataType1 = "output type"
+    inputDataType2 = "output type"
+    inputDataType3 = "output type"
+    inputDataType4 = "output type"
+    inputHandling0 = AllowAny
+    inputHandling1 = AllowAny
+    inputHandling2 = AllowAny
+    inputHandling3 = AllowAny
+    inputHandling4 = AllowAny
+  }
+}
+module ConstantImage {
+  internal  {
+    frame = "169 1453 128 88"
+    moduleGroupName = "Linearity Property"
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "1171 631 218 238"
+        sizeHint = "218 238"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = c1
+    sizeX = 128
+    sizeY = 128
+    sizeZ = 1
+    sizeC = 1
+    sizeT = 1
+    sizeU = 1
+    dataType = float
+    fillValue = 0.90000004
+    autoApply = TRUE
+  }
+}
+module ConstantImage {
+  internal  {
+    frame = "313 1453 128 88"
+    moduleGroupName = "Linearity Property"
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "1171 631 241 245"
+        sizeHint = "236 245"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "469 177 500 600"
+        sizeHint = "262 217"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = c2
+    sizeX = 128
+    sizeY = 128
+    sizeZ = 1
+    sizeC = 1
+    sizeT = 1
+    sizeU = 1
+    dataType = float
+    fillValue = 0.40000001
+    autoApply = TRUE
+  }
+}
+module View2D {
+  internal  {
+    frame = "701 1805 120 56"
+    moduleGroupName = "Linearity Input"
+    windows  {
+      window _default {
+        geometry = "1040 500 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 127.5
+    lutWidth = 255
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module View2D {
+  internal  {
+    frame = "293 1789 120 56"
+    moduleGroupName = "Linearity Input"
+    windows  {
+      window _default {
+        geometry = "1040 500 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D7
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 127.5
+    lutWidth = 255
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module ConstantImage {
+  internal  {
+    frame = "813 1461 136 88"
+    moduleGroupName = "Linearity Property"
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "1171 631 218 238"
+        sizeHint = "218 238"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = c2_complex
+    sizeX = 128
+    sizeY = 128
+    sizeZ = 1
+    sizeC = 1
+    sizeT = 1
+    sizeU = 1
+    dataType = complexf
+    fillValue = "0.40000001 1"
+    autoApply = TRUE
+  }
+}
+module ConstantImage {
+  internal  {
+    frame = "669 1461 136 88"
+    moduleGroupName = "Linearity Property"
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "1171 631 218 238"
+        sizeHint = "218 238"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = c1_complex
+    sizeX = 128
+    sizeY = 128
+    sizeZ = 1
+    sizeC = 1
+    sizeT = 1
+    sizeU = 1
+    dataType = complexf
+    fillValue = "0.90000004 1"
+    autoApply = TRUE
+  }
+}
+module ComplexToReal {
+  internal  {
+    frame = "805 997 120 72"
+    moduleGroupName = "Linearity Property"
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "622 457 194 40"
+        sizeHint = "194 40"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ComplexToReal
+    Operators = Absolute
+  }
+}
+module Arithmetic2 {
+  internal  {
+    frame = "825 1245 96 72"
+    moduleGroupName = "Linearity Property"
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "531 425 382 105"
+        sizeHint = "377 105"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Arithmetic21
+    function = Multiply
+    outputImageSize = InvalidateOutputIfSizesDiffer
+    constant = 0
+    autoReplicate = FALSE
+  }
+}
+module Arithmetic2 {
+  internal  {
+    frame = "693 1245 104 72"
+    moduleGroupName = "Linearity Property"
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "531 425 382 105"
+        sizeHint = "377 105"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Arithmetic22
+    function = Multiply
+    outputImageSize = InvalidateOutputIfSizesDiffer
+    constant = 0
+    autoReplicate = FALSE
+  }
+}
+module Arithmetic2 {
+  internal  {
+    frame = "813 1141 104 72"
+    moduleGroupName = "Linearity Property"
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "531 425 382 105"
+        sizeHint = "377 105"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Arithmetic23
+    function = Add
+    outputImageSize = InvalidateOutputIfSizesDiffer
+    constant = 0
+    autoReplicate = FALSE
+  }
+}
+module Arithmetic2 {
+  internal  {
+    frame = "197 1253 104 72"
+    moduleGroupName = "Linearity Property"
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "531 425 382 105"
+        sizeHint = "377 105"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Arithmetic24
+    function = Multiply
+    outputImageSize = InvalidateOutputIfSizesDiffer
+    constant = 0
+    autoReplicate = FALSE
+  }
+}
+module Arithmetic2 {
+  internal  {
+    frame = "333 1253 104 72"
+    moduleGroupName = "Linearity Property"
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "531 425 382 105"
+        sizeHint = "377 105"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Arithmetic25
+    function = Multiply
+    outputImageSize = InvalidateOutputIfSizesDiffer
+    constant = 0
+    autoReplicate = FALSE
+  }
+}
+module Arithmetic2 {
+  internal  {
+    frame = "212 1101 104 72"
+    moduleGroupName = "Linearity Property"
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "531 425 382 105"
+        sizeHint = "377 105"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Arithmetic26
+    function = Add
+    outputImageSize = InvalidateOutputIfSizesDiffer
+    constant = 0
+    autoReplicate = FALSE
+  }
+}
+module FFT {
+  internal  {
+    frame = "-630 821 64 56"
+    moduleGroupName = "Multiplication and Convolution"
+    windows  {
+      window _default {
+        geometry = "576 329 279 304"
+        sizeHint = "279 304"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = FFT2
+    xDim = TRUE
+    yDim = TRUE
+    zDim = FALSE
+    cDim = FALSE
+    tDim = FALSE
+    uDim = FALSE
+    xDimSize = 128
+    yDimSize = 128
+    zDimSize = 1
+    cDimSize = 1
+    tDimSize = 1
+    uDimSize = 1
+    calculateInverse = TRUE
+    outputType = Magnitude
+    shiftFrequencyCenter = TRUE
+    windowFunction = None
+    frequencyUnit = "Keep original"
+    autoUpdate = TRUE
+    preProcessOnly = FALSE
+    keepFFTSize = TRUE
+  }
+}
+module Convolution {
+  internal  {
+    frame = "-415 949 96 56"
+    moduleGroupName = "Multiplication and Convolution"
+    windows  {
+      window _default {
+        geometry = "1052 380 321 178"
+        sizeHint = "316 178"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Convolution
+    borderHandling = PadSrcClamp
+    fillValue = 0
+    referenceExtentMode = Overlap
+    intervalMinOfFilteredVoxels = 0
+    intervalMaxOfFilteredVoxels = 1024
+    useIntervalOfFilteredVoxels = FALSE
+    externalKernel = ""
+    predefKernel = "25x25 Average Kernel"
+  }
+}
+module ComplexArithmetic2 {
+  internal  {
+    frame = "-658 935 136 72"
+    moduleGroupName = "Multiplication and Convolution"
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "626 457 187 40"
+        sizeHint = "187 40"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ComplexArithmetic2
+    Operators = Multiply
+  }
+}
+connections  {
+  FFT.input0 = Switch23.outImage
+  View_F.inImage = MinMaxScan2.output0
+  Switch22.inLeft = PythonArithmetic2.output0
+  Switch22.inRight = PythonArithmetic3.output0
+  Logarithm.input0 = FFT.output0
+  FFT1.input0 = Arithmetic26.output0
+  Arithmetic1.input0 = FFT1.output0
+  MinMaxScan1.input0 = Arithmetic1.output0
+  Arithmetic2.input0 = ComplexToReal.output0
+  MinMaxScan3.input0 = Arithmetic2.output0
+  View2D4.inImage = MinMaxScan1.output0
+  View2D5.inImage = MinMaxScan3.output0
+  Switch21.inLeft = PythonArithmetic.output0
+  Switch21.inRight = PythonArithmetic1.output0
+  MinMaxScan2.input0 = Logarithm.output0
+  Switch23.inLeft = PythonArithmetic6.output0
+  Switch23.inRight = PythonArithmetic7.output0
+  View_f.inImage = Switch23.outImage
+  FFT8.input0 = PythonArithmetic10.output0
+  View2D12.inImage = Convolution.output0
+  View2D13.inImage = FFT2.output0
+  FFT9.input0 = PythonArithmetic11.output0
+  FFTofH.input0 = Switch21.outImage
+  FFTofG.input0 = Switch22.outImage
+  Arithmetic3.input0 = ShowSeperableProperty.output0
+  MinMaxScan4.input0 = Arithmetic3.output0
+  FFT14.input0 = PythonArithmetic8.output0
+  View2D6.inImage = MinMaxScan5.output0
+  Arithmetic4.input0 = FFT14.output0
+  MinMaxScan5.input0 = Arithmetic4.output0
+  ViewSpatialDomain.inImage = PythonArithmetic8.output0
+  ShowSeperableProperty.input0 = PythonArithmetic8.output0
+  View2D3.inImage = MinMaxScan4.output0
+  View2D.inImage = Switch22.outImage
+  View2D7.inImage = Switch21.outImage
+  ComplexToReal.input0 = Arithmetic23.output0
+  Arithmetic21.input0 = FFTofG.output0
+  Arithmetic21.input1 = c2_complex.output0
+  Arithmetic22.input0 = FFTofH.output0
+  Arithmetic22.input1 = c1_complex.output0
+  Arithmetic23.input0 = Arithmetic22.output0
+  Arithmetic23.input1 = Arithmetic21.output0
+  Arithmetic24.input0 = c1.output0
+  Arithmetic24.input1 = Switch21.outImage
+  Arithmetic25.input0 = c2.output0
+  Arithmetic25.input1 = Switch22.outImage
+  Arithmetic26.input0 = Arithmetic24.output0
+  Arithmetic26.input1 = Arithmetic25.output0
+  FFT2.input0 = ComplexArithmetic2.output0
+  Convolution.input0 = PythonArithmetic11.output0
+  ComplexArithmetic2.input0 = FFT8.output0
+  ComplexArithmetic2.input1 = FFT9.output0
+}
+networkModel  {
+  parentItems  {
+    0  {
+      MLABNetworkModelItem MLABNetworkModelItemGroup {
+        uniqueId = 204
+        objectName = "Showcase Fourier Scaling"
+        parentUniqueId = 0
+        color  {
+          r = 45
+          g = 226
+          b = 226
+          a = 40
+        }
+      }
+      MLABNetworkModelItem MLABNoteItem {
+        uniqueId = 224
+        objectName = ""
+        parentUniqueId = 0
+        frame = "-919 -163 570 440"
+        backgroundColor  {
+          r = 252
+          g = 242
+          b = 2
+          a = 255
+        }
+        text = "*The Fourier Scaling property is as follows:
+
+f(t / a) -> |a| F(aw)
+
+Think about this in terms of (co)sines first. Changing a in this case would be like changing the period. Decreasing a would lead to a higher frequency and vice-versa. In this 1D case, if we increase the frequency, we essentially "squash" the function together, which should lead to proportional stretching in the frequency domain. Conversely, if we stretch the function out (lower frequency) we should see a lower frequency in the Fourier domain.
+
+In the spatial domain (2D) this intuition is similar. We first need to define our 2D signal. You can view how we did this in the PythonArithmetic modules below: the left one can be seen as our function f(x/16), while the right one has twice the spatial frequency f(x/8). If we double the frequency (halving the period), we should see the same as scaling up our frequency spectrum with a factor of 2!
+
+Now, actually scaling (resizing) the Fourier domain is cumbersome. We do not want you to perform overly cumbersome tasks either. So it suffices to explain this last insight in text in your own assignments. If you toggle between the `left` and `right` patterns while observing the Fourier domain using the `View_F View2D)` module, you should notice that:
+1. The center frequency is at (64, 64)
+2. Using the `left` image, second frequency is 4 pixels to the right (we ignore the symmetry in the FD here).
+3. If we switch to the `right` image, the second frequency dot is 8 pixels to the right.
+
+An explanation like this suffices for your assignments.*"
+        richText = "*<html>
+  <head>
+    <style type="text/css">
+      a.headerlink {
+        visibility: hidden;
+      }
+      table {
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+
+  <p>The Fourier Scaling property is as follows:</p>
+<p>f(t / a) -&gt; <a href="#id1"><span class="problematic" id="id2">|a|</span></a> F(aw)</p>
+<p>Think about this in terms of (co)sines first. Changing a in this case would be like changing the period. Decreasing a would lead to a higher frequency and vice-versa. In this 1D case, if we increase the frequency, we essentially &quot;squash&quot; the function together, which should lead to proportional stretching in the frequency domain. Conversely, if we stretch the function out (lower frequency) we should see a lower frequency in the Fourier domain.</p>
+<p>In the spatial domain (2D) this intuition is similar. We first need to define our 2D signal. You can view how we did this in the PythonArithmetic modules below: the left one can be seen as our function f(x/16), while the right one has twice the spatial frequency f(x/8). If we double the frequency (halving the period), we should see the same as scaling up our frequency spectrum with a factor of 2!</p>
+<p>Now, actually scaling (resizing) the Fourier domain is cumbersome. We do not want you to perform overly cumbersome tasks either. So it suffices to explain this last insight in text in your own assignments. If you toggle between the <cite>left</cite> and <cite>right</cite> patterns while observing the Fourier domain using the <cite>View_F View2D)</cite> module, you should notice that:
+1. The center frequency is at (64, 64)
+2. Using the <cite>left</cite> image, second frequency is 4 pixels to the right (we ignore the symmetry in the FD here).
+3. If we switch to the <cite>right</cite> image, the second frequency dot is 8 pixels to the right.</p>
+<p>An explanation like this suffices for your assignments.</p>
+
+
+  </body>
+</html>*"
+        titleText = "Visual proof for Fourier Scaling"
+        isCollapsed = False
+        drawAsComment = False
+        titleFrame = "-914 -158 560 22"
+      }
+      MLABNetworkModelItem MLABNetworkModelItemGroup {
+        uniqueId = 201
+        objectName = "Multiplication and Convolution"
+        parentUniqueId = 0
+        color  {
+          r = 45
+          g = 226
+          b = 226
+          a = 40
+        }
+      }
+      MLABNetworkModelItem MLABNetworkModelItemGroup {
+        uniqueId = 185
+        objectName = "Linearity Property"
+        parentUniqueId = 0
+        color  {
+          r = 45
+          g = 226
+          b = 226
+          a = 40
+        }
+      }
+      MLABNetworkModelItem MLABNoteItem {
+        uniqueId = 355
+        objectName = ""
+        parentUniqueId = 0
+        frame = "133 487 237 126"
+        backgroundColor  {
+          r = 252
+          g = 242
+          b = 2
+          a = 255
+        }
+        text = "Here, the Fourier transform of the left-hand side of the Linearity property should be shown. Note that h and g are the input images and F denotes the FT. Lastly, c1 and c2 are scalars. "
+        richText = "*<html>
+  <head>
+    <style type="text/css">
+      a.headerlink {
+        visibility: hidden;
+      }
+      table {
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+
+  <p>Here, the Fourier transform of the left-hand side of the Linearity property should be shown. Note that h and g are the input images and F denotes the FT. Lastly, c1 and c2 are scalars.</p>
+
+
+  </body>
+</html>*"
+        titleText = "F (c1 * h(x, y) + c2 * g(x, y))"
+        isCollapsed = False
+        drawAsComment = False
+        titleFrame = "138 492 227 22"
+      }
+      MLABNetworkModelItem MLABNetworkModelItemGroup {
+        uniqueId = 415
+        objectName = SeparableFunctions
+        parentUniqueId = 0
+        color  {
+          r = 45
+          g = 226
+          b = 226
+          a = 40
+        }
+      }
+      MLABNetworkModelItem MLABNoteItem {
+        uniqueId = 562
+        objectName = ""
+        parentUniqueId = 0
+        frame = "702 488 275 126"
+        backgroundColor  {
+          r = 252
+          g = 242
+          b = 2
+          a = 255
+        }
+        text = "And here you should show the right-hand side of the Linearity property."
+        richText = "*<html>
+  <head>
+    <style type="text/css">
+      a.headerlink {
+        visibility: hidden;
+      }
+      table {
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+
+  <p>And here you should show the right-hand side of the Linearity property.</p>
+
+
+  </body>
+</html>*"
+        titleText = "c1 * F( h(x, y) ) + c2 * F ( g(x, y) )"
+        isCollapsed = False
+        drawAsComment = False
+        titleFrame = "707 493 265 22"
+      }
+      MLABNetworkModelItem MLABNetworkModelItemGroup {
+        uniqueId = 106
+        objectName = "Linearity Input"
+        parentUniqueId = 0
+        color  {
+          r = 45
+          g = 226
+          b = 226
+          a = 40
+        }
+      }
+      MLABNetworkModelItem MLABNoteItem {
+        uniqueId = 120
+        objectName = ""
+        parentUniqueId = 0
+        frame = "58 -65 200 200"
+        backgroundColor  {
+          r = 252
+          g = 242
+          b = 2
+          a = 255
+        }
+        text = "To visualize the FT, we first need to convert the FT results from the complex plane to a real value. We can do this using `ComplexToReal` and taking the absolute value. Afterwards, we perform log-scaling log10(1 + I) and MinMaxScan to make the coefficients cleanly visible.
+
+Re-use this pattern to visualize your FT coefficients in a consistent way.
+"
+        richText = "*<html>
+  <head>
+    <style type="text/css">
+      a.headerlink {
+        visibility: hidden;
+      }
+      table {
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+
+  <p>To visualize the FT, we first need to convert the FT results from the complex plane to a real value. We can do this using <cite>ComplexToReal</cite> and taking the absolute value. Afterwards, we perform log-scaling log10(1 + I) and MinMaxScan to make the coefficients cleanly visible.</p>
+<p>Re-use this pattern to visualize your FT coefficients in a consistent way.</p>
+
+
+  </body>
+</html>*"
+        titleText = "Visualizing the FT"
+        isCollapsed = False
+        drawAsComment = False
+        titleFrame = "63 -60 190 22"
+      }
+    }
+  }
+}
