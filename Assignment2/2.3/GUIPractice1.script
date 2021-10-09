@@ -1,0 +1,32 @@
+Interface {
+  Parameters {
+    Field persistentToggle { type = Bool value = false }
+  }
+}
+
+Commands {
+
+  source = $(LOCAL)/GUIPractice.py
+}
+
+Window {
+  Vertical {
+    expandY = Yes
+    Splitter {
+      Button { title = "Switch 2D/3D"    command = "py: buttonPressed() "        }
+      Viewer View2D4.self {
+        name            = "Viewer_2D"    
+        clone           = NO
+        preferredWidth  = 500
+        preferredHeight = 500
+      }
+      Viewer View3D.self {
+        name            = "Viewer_3D"    
+        clone           = NO
+        preferredWidth  = 500
+        preferredHeight = 500
+      }
+      
+    }
+  }
+}
