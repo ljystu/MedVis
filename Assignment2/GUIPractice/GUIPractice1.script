@@ -35,7 +35,7 @@ Window MyViewer{
       // Names of modules/viewers are case sensitive.
       TabView {
         TabViewItem "Page 1" {
-          Button { title = "No box here"    command = "py: print('No Box!') "        }
+
         
       Viewer ViewCircle.self {
         name            = "Viewer_2D"    
