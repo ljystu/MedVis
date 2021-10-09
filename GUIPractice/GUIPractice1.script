@@ -1,0 +1,56 @@
+Interface {
+  Parameters {
+    Field persistentToggle { type = Bool value = false }
+ 
+  }
+}
+
+Commands {
+  // Indicate the source Python file
+  source = $(LOCAL)/GUIPractice1.py
+  
+  // Sometimes you also want a function to trigger when a Field changes a value, for instance if the user changes some slider or a types in a number. This is where FieldListener's come in.
+  
+  // This FieldListener triggers the function `updateCounter` in `Assignment-2-3.py` when the currentValue field from MyCounter changes.
+  
+
+  // With just the above, if you change the slider's position, the Counter module's value will not change.
+  // If you want a bi-directional update, you need to add another FieldListener that updates the Counter's value using the updateCounter function.
+
+}
+
+Window MyViewer{
+  Vertical {
+    expandY = YES    
+    Box "ToggleView" {        
+      Button { title = "ToggleView"    command = "py: buttonPressed() "        }
+    }
+   
+    
+    // Splitter organizes any children in it horizontally or vertically. 
+    // It will show draggable borders between elements. If you hover over the dividing line between 
+    // for instance Viewer A and the settings pane in the middle, you will be able to resize the settings and Viewer area.
+    Splitter {
+    
+      // Names of modules/viewers are case sensitive.
+      TabView {
+        TabViewItem "Page 1" {
+          Button { title = "No box here"    command = "py: print('No Box!') "        }
+        
+      Viewer ViewCircle.self {
+        name            = "Viewer_2D"    
+        clone           = NO
+        preferredWidth  = 600
+        preferredHeight = 500
+      }}
+      // Lastly, add a viewer on the right-side of the settings menu.
+        TabViewItem "Page 2" {
+        Viewer ViewSphere.self {
+        name            = "Viewer_3D"    
+        clone           = NO
+        preferredWidth  = 600
+        preferredHeight = 500
+      }
+        }}
+  }
+  }}
