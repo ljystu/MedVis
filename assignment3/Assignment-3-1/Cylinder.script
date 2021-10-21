@@ -1,0 +1,24 @@
+Interface {
+  Inputs {
+    Field inImg { internalName = IsoSurface.inImage }
+  }
+  Outputs {
+    Field outImg { internalName = IsoSurface.outScene }
+  }
+  Parameters {}
+}
+Commands {
+  source = $(LOCAL)/Cylinder.py
+}
+Window Viewer {
+  Vertical {
+    Button {
+      title   = "print_version"
+      command = print_version
+    }
+    Button {
+      title   = "Cylinder"
+      command = Cylinder
+    }  
+  }
+}

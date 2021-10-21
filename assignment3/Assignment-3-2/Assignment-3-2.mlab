@@ -1,0 +1,134 @@
+// MDL v1 utf8
+mevislabVersion = 3.4.2
+network  {
+  watchlist = ""
+}
+module vtkXMLImageDataReader {
+  internal  {
+    frame = "457 405 176 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "850 431 330 296"
+        sizeHint = "275 296"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "0 0 0 0"
+        sizeHint = "338 224"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = vtkXMLImageDataReader
+    wholeSlices = 1
+    timeStep = 0
+    fileName = $(NETWORK)/data/aneurysm.vti
+    timeStepRange = "0 0 "
+    status = "Output is valid"
+  }
+}
+module VTKToMLImage {
+  internal  {
+    frame = "469 293 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "660 222 618 711"
+        sizeHint = "600 711"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = VTKToMLImage
+    convert2CompsTo = Complex
+    convert3CompsTo = Vec3
+    convert4CompsTo = Mat2
+    convert6CompsTo = Vec6
+    convert9CompsTo = Mat3
+    convert16CompsTo = Mat4
+    convert25CompsTo = Mat5
+    convert36CompsTo = Mat6
+    dirCosines = "1 0 0 0
+0 1 0 0
+0 0 1 0
+0 0 0 1"
+    useDirCosines = FALSE
+    adaptOriginToVTKExtent = TRUE
+    status = "Valid vtkImageData connected"
+    imgInfo = "# Cells       = 7703040
+# Points      = 7829248
+# Components  = 1
+Extent        = 256 x 257 x 119
+Scalar Type   = short(4)
+Spacing       = 0.742188 x 0.742188 x 1.500000
+Origin        = -191.628910 x -317.628910 x -445.500000
+Min Vox Value = -1024.000000
+Max Vox Value = 1524.000000"
+  }
+}
+module OrthoView2D {
+  internal  {
+    frame = "501 125 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "760 355 400 430"
+        sizeHint = "400 430"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = OrthoView2D
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    synchronizePosition = TRUE
+    layout = LAYOUT_CUBE_EQUAL
+    filterMode = FILTER_LINEAR
+    synchronizeZoom = TRUE
+    synchronizePanning = FALSE
+    useGlobalInputImage = TRUE
+    snapToCenter = FALSE
+    alternCubeLayout = FALSE
+    timePoint = 0
+    useManagedInteraction = FALSE
+    enableSlicing = TRUE
+    borderOn = TRUE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    grayWidth = 2548
+    grayCenter = 250
+    annotationOn = TRUE
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationFontSize = ANNO_SIZE_AUTO
+    valueHighPrecision = TRUE
+    annoCoords = Voxel
+    showCurrentPos = TRUE
+    worldPosition = "-146.260803222656 -181.755584716797 -445.5"
+    coloredMode = FALSE
+  }
+}
+module vtkVolumeRenderer {
+  internal  {
+    frame = "857 133 144 56"
+    moduleGroupName = ""
+    localMacro = 1
+    windows  {
+      window _default {
+        geometry = "770 536 380 82"
+        sizeHint = "380 82"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = vtkVolumeRenderer
+  }
+}
+connections  {
+  VTKToMLImage.inputvtkImageData = vtkXMLImageDataReader.outputXMLImageDataReader
+  OrthoView2D.image = VTKToMLImage.output0
+}
+networkModel = ""

@@ -1,0 +1,35 @@
+// MDL v1 utf8
+mevislabVersion = 3.4.2
+network  {
+  watchlist = ""
+}
+module IsoSurface {
+  internal  {
+    frame = "453 285 120 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "545 307 349 340"
+        sizeHint = "349 340"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = IsoSurface
+    isoValue = 400
+    quality = 3
+    useInterpolation = TRUE
+    useSmoothing = FALSE
+    smoothingPasses = 5
+    smoothingFactor = 0.2
+    usePolygonReduction = FALSE
+    targetReduction = 70
+    autoUpdate = TRUE
+    autoApply = TRUE
+    selectedTab = 0
+  }
+}
+connections = ""
+networkModel = ""

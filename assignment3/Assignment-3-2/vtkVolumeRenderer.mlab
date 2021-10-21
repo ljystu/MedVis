@@ -1,0 +1,135 @@
+// MDL v1 utf8
+mevislabVersion = 3.4.2
+network  {
+  watchlist = ""
+}
+module SoLUTEditor {
+  internal  {
+    frame = "733 277 104 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "637 345 646 465"
+        sizeHint = "646 465"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoLUTEditor
+    rangeMin = 0
+    rangeMax = 2548
+    viewMin = 0
+    viewMax = 2548
+    window = 1
+    level = 0.5
+    allowNewPoints = TRUE
+    updateLutWhileDragging = TRUE
+    relativeLut = FALSE
+    colorInterpolation = InterpolateRGB
+    colorPoints = "[ 0 0.921568632125854 0.776470601558685 0.768627464771271, 2548 0.725490212440491 0.149019613862038 0.0784313753247261 ]"
+    alphaPoints = "[ 0 0, 2548 1 ]"
+    alphaFactor = 1
+    newRangeMin = 0
+    newRangeMax = 2548
+    newRangeMode = ClipFormerLUT
+    colorEditorHeight = 24
+    showColorEditor = TRUE
+    showAlphaEditor = TRUE
+    markerRadius = 4
+    selectedMarkerRadius = 6
+    snapMarkerRadius = 10
+    alphaLineWidth = 2
+    backgroundColor = "0.800000011920929 0.800000011920929 0.800000011920929"
+    borderColor = "0 0 0"
+    alphaLineColor = "0 0 0"
+    histogramColor = "0.400000005960464 0.400000005960464 0.400000005960464"
+    drawColoredMarkers = TRUE
+    markerColor = "1 1 1"
+    selectedMarkerColor = "1 0.5 0.5"
+    selectedTriangleSize = 8
+    triangleSize = 6
+    useAntiAliasing = TRUE
+  }
+}
+module SoLUTEditor {
+  internal  {
+    frame = "1057 285 112 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "637 345 646 465"
+        sizeHint = "646 465"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoLUTEditor1
+    rangeMin = 0
+    rangeMax = 2548
+    viewMin = 0
+    viewMax = 2548
+    window = 1
+    level = 0.5
+    allowNewPoints = TRUE
+    updateLutWhileDragging = TRUE
+    relativeLut = FALSE
+    colorInterpolation = InterpolateConstant
+    colorPoints = "[ 0 0 0 0, 1835.36010742188 0 0 0, 2548 1 1 1 ]"
+    alphaPoints = "[ 0 0.504702210426331, 1835.36010742188 0.0595611296594143, 2548 1 ]"
+    alphaFactor = 1
+    newRangeMin = 0
+    newRangeMax = 2548
+    newRangeMode = ClipFormerLUT
+    colorEditorHeight = 24
+    showColorEditor = TRUE
+    showAlphaEditor = TRUE
+    markerRadius = 4
+    selectedMarkerRadius = 6
+    snapMarkerRadius = 10
+    alphaLineWidth = 2
+    backgroundColor = "0.800000011920929 0.800000011920929 0.800000011920929"
+    borderColor = "0 0 0"
+    alphaLineColor = "0 0 0"
+    histogramColor = "0.400000005960464 0.400000005960464 0.400000005960464"
+    drawColoredMarkers = TRUE
+    markerColor = "1 1 1"
+    selectedMarkerColor = "1 0.5 0.5"
+    selectedTriangleSize = 8
+    triangleSize = 6
+    useAntiAliasing = TRUE
+  }
+}
+module MLToVTKColorTransferFunction {
+  internal  {
+    frame = "673 157 208 56"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = MLToVTKColorTransferFunction
+    status = "Output function is up to date"
+  }
+}
+module MLToVTKPiecewiseFunction {
+  internal  {
+    frame = "1013 149 184 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "809 565 303 24"
+        sizeHint = "303 24"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = MLToVTKPiecewiseFunction
+    status = "Output function is up to date"
+  }
+}
+connections  {
+  MLToVTKColorTransferFunction.inLUTFLinear = SoLUTEditor.outLUT
+  MLToVTKPiecewiseFunction.inLUTFLinear = SoLUTEditor1.outLUT
+}
+networkModel = ""

@@ -1,0 +1,16 @@
+Interface {
+  Parameters {}
+}
+
+Commands {
+  source = $(LOCAL)/vtkVolumeRenderer.py
+
+}
+
+Window Viewer {
+  Button {
+    title = "vtkVolumeRendering"
+    command = vtkRenderVolume
+  }
+
+}

@@ -1,0 +1,17 @@
+Interface {
+Inputs {
+Field inImg { internalName = IsoSurface.inImage }
+ }
+Outputs {
+Field outImg { internalName = IsoSurface.outScene }
+ }
+Parameters {}
+}
+Commands {
+source = $(LOCAL)/exercise1.py
+}
+Window Viewer {
+Button {
+title = "exercise1"
+command = ???
+} }
