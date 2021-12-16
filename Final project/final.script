@@ -1,0 +1,138 @@
+Interface {
+  Parameters {
+    Field persistentToggle { type = Bool value = false }    
+    Field name     { type = string value = "" }
+    Field isoValue         { internalName = "IsoSurface1.isoValue"      }
+    Field quality          { type = int value = 3 min = 1 max = 12           }           
+    Field apply       { type = trigger triggersLoading = Yes }
+    Field autoUpdate  { type = bool value = false }
+    Field autoApply   { type = bool value = false }
+    Filed fullUserPaths { type = String value = false }
+    Field timepoint         { internalName = "RespirationCircle.currentTimePoint"      }
+    Field timepointref {internalName = ROISelect2.timepoint}
+    Field timepointselect {internalName = ROISelect3.timepoint}
+  }
+}
+
+///////////////////////////////////////
+
+// Secondly, there is the Commands section. It is used to declare and import Python scripts and assign functions.
+// For instance, a Button may require a certain function to trigger, but MeVisLab will need to know where the source definitions are located.
+Commands {
+
+  // Indicate the source Python file
+  source = $(LOCAL)/final.py
+  
+  // Lets also update the ProgressBar with a float value derived from the counter value
+  initCommand        = init
+  FieldListener { 
+    listenField = timepoint
+    command     = updateFields
+  }
+}
+
+///////////////////////////////////////
+
+// Window definition! Here all the MDL code will go which dictates how UI elements look.
+
+Window MyViewer{
+  wakeupCommand = initConfigurationListView
+    // Splitter organizes any children in it horizontally or vertically. 
+    // It will show draggable borders between elements. If you hover over the dividing line between 
+    // for instance Viewer A and the settings pane in the middle, you will be able to resize the settings and Viewer area.
+    Splitter {
+    
+      // Names of modules/viewers are case sensitive.
+      
+      Vertical {
+        expandX        = YES
+        preferredWidth = 800
+        panelName      = "Some_Settings"
+        
+        // A TabView lets us have multiple options or settings in a compact area
+        TabView {
+          TabViewItem "Import Settings" {
+            Vertical {
+                    Box "Load Data" {
+                      Horizontal {
+                        FieldLabel name { title = "Name:" labelAlignGroup = group1 }
+                        ComboBox name { name = pathChoices }
+                        Button {
+                          title   = "Add Source Directory..."
+                          command = addUserDir
+                        }
+                        Button { title = "Import"    command = "py: LoadImage()"        }
+                      }       
+                    }   
+             
+                  Box "Region growing start point select" {
+                    Viewer OrthoView2D.self {
+                      name            = "OrthoView2D"    
+                      clone           = NO
+                      preferredWidth  = 600
+                      preferredHeight = 500
+                    }
+                  }           
+            }
+                      
+          }
+          TabViewItem "Respiratory Circle Lung Volmume" { 
+            Horizontal {
+              Vertical
+              {
+              Viewer RespirationCircle.self {
+                name            = "RespirationCircle"    
+                clone           = NO
+                preferredWidth  = 600
+                preferredHeight = 500
+              }
+                Box "Respiration Circle" {        
+                  Horizontal {
+                    Box  "Timepoint"{
+                      Field timepoint { step = 1 }
+                    }
+                  }
+                  Horizontal {
+                    CheckBox autoUpdate {}
+                    CheckBox autoApply {}
+                    Button   apply {}
+                  }
+                } 
+                
+            }
+              
+
+              Panel LungVolumeInspector.self {
+                module = LungVolumeInspector
+                name            = "LungVolumeInspector"    
+                clone           = NO
+                preferredWidth  = 600
+                preferredHeight = 500
+              }
+            }
+          }
+          TabViewItem "HU Lung Volume" {
+          }
+          TabViewItem "Dynamic Ventilation Imaging" {
+            Vertical {
+              Viewer Ventilation.self {
+                name            = "Ventilation"    
+                clone           = NO
+                preferredWidth  = 600
+                preferredHeight = 500
+              }
+              Box "Timepoint" {
+                Horizontal {
+                  Field timepointref { step = 1 }
+                  Field timepointselect {step = 1}
+                }
+              }
+            }
+          }
+        }
+      }
+      
+    }
+
+
+}
