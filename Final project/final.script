@@ -11,6 +11,9 @@ Interface {
     Field timepoint         { internalName = "RespirationCircle.currentTimePoint"      }
     Field timepointref {internalName = ROISelect2.timepoint}
     Field timepointselect {internalName = ROISelect3.timepoint}
+    Field timepointHU {internalName = Histogram.curveStyle min=0 max=9}
+    Field Xmin {internalName = SoDiagram2D.minX}
+    Field Xmax {internalName = SoDiagram2D.maxX}
   }
 }
 
@@ -35,7 +38,7 @@ Commands {
 
 // Window definition! Here all the MDL code will go which dictates how UI elements look.
 
-Window MyViewer{
+Window "Ventilation Inspector"{
   wakeupCommand = initConfigurationListView
     // Splitter organizes any children in it horizontally or vertically. 
     // It will show draggable borders between elements. If you hover over the dividing line between 
@@ -105,13 +108,35 @@ Window MyViewer{
               Panel LungVolumeInspector.self {
                 module = LungVolumeInspector
                 name            = "LungVolumeInspector"    
-                clone           = NO
                 preferredWidth  = 600
                 preferredHeight = 500
               }
             }
           }
           TabViewItem "HU Lung Volume" {
+            Vertical {
+              Viewer SoRenderArea.self{
+                module          = Histogram
+                name            = "Histogram"    
+                preferredWidth  = 600
+                preferredHeight = 500        
+              }
+              Box "Settings"{
+                Horizontal {
+                  Horizontal {
+                    expandX        = YNo
+                    Field Xmin {step = 50}
+                    Field Xmax {step = 50}
+                  }
+                  HSpacer {}
+                  Horizontal {
+                    Field timepointHU {step = 1}
+                  }
+                  
+                }
+                
+              }
+            }
           }
           TabViewItem "Dynamic Ventilation Imaging" {
             Vertical {

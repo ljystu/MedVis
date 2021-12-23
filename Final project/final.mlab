@@ -490,7 +490,7 @@ module OrthoView2D {
     valueHighPrecision = TRUE
     annoCoords = Voxel
     showCurrentPos = TRUE
-    worldPosition = "-108.3984375 34.8627319335938 -503.206909179688"
+    worldPosition = "-105.86678314209 -6.5234375 -469.689636230469"
     coloredMode = FALSE
   }
 }
@@ -514,7 +514,7 @@ module GetVoxelValue {
   }
   fields  {
     instanceName = GetVoxelValue
-    position = "-108.3984375 34.8627319335938 -503.206909179688 0 0 0"
+    position = "-105.86678314209 -6.5234375 -469.689636230469 0 0 0"
     updateMode = AutoClear
     coordinateType = World
     interpolation = NearestNeighbor
@@ -575,8 +575,8 @@ module RegionGrowing {
   fields  {
     instanceName = RegionGrowing1
     autoUpdateMode = AutoUpdate
-    lowerThreshold = -2326
-    upperThreshold = 658
+    lowerThreshold = -2201
+    upperThreshold = 783
     enableAutoThresholdInterval = TRUE
     basicNeighborhoodType = BNBH_4D_8_XYZT
     extendedNeighborhoodType = ENBH_2D_4_XZ
@@ -696,7 +696,7 @@ module SoExaminerViewer {
     stereoOffset = 3
     height = 0.78539819
     position = "38.6132965087891 662.013916015625 -390.553527832031"
-    orientation = "0.142389178276062 -0.676591873168945 -0.722460210323334 3.56018400192261"
+    orientation = "0.142389163374901 -0.676591873168945 -0.722460150718689 3.56018400192261"
     nearDistance = 527.06934
     farDistance = 800.8114
     focalDistance = 662.7265
@@ -736,7 +736,7 @@ module ConstantXMarkerList {
   }
   fields  {
     instanceName = ConstantXMarkerList
-    markerList = "-108.3984375 34.8627319335938 -503.206909179688"
+    markerList = "-105.86678314209 -6.5234375 -469.689636230469"
   }
 }
 module View3D {
@@ -781,12 +781,12 @@ module View3D {
     alphaFactor = 1
     colorFactor = "1 1 1"
     camType = TRUE
-    camPosition = "166.101440429688 -555.887756347656 -817.211059570313"
-    camOrientation = "-0.976727187633514 -0.207461982965469 -0.0544374585151672 4.16844654083252"
+    camPosition = "97.0477828979492 -348.147735595703 -372.758544921875"
+    camOrientation = "0.96740311384201 0.104313746094704 0.230759263038635 1.38534128665924"
     initialCameraOrientation = CAMERA_KEEP_AS_IS
-    camFar = 934.03467
-    camNear = 455.13516
-    camFocal = 694.34601
+    camFar = 606.06635
+    camNear = 169.01396
+    camFocal = 387.32193
     camHeight = 0.78539801
     decoration = FALSE
     annotations = TRUE
@@ -1004,18 +1004,23 @@ module CurveInspector {
 }
 module Histogram {
   internal  {
-    frame = "848 -391 120 56"
+    frame = "614 -533 120 56"
     moduleGroupName = "HU histogram"
     showNetworkPanel = true
     windows  {
       window _default {
-        geometry = "653 284 421 385"
-        sizeHint = "421 385"
+        geometry = "1133 -746 437 389"
+        sizeHint = "437 389"
         wasOpen = no
       }
       window _automatic {
-        geometry = "469 177 500 600"
+        geometry = "890 247 500 600"
         sizeHint = "262 217"
+        wasOpen = no
+      }
+      window _scriptingconsole {
+        geometry = "419 227 600 500"
+        sizeHint = "256 192"
         wasOpen = no
       }
     }
@@ -1025,21 +1030,21 @@ module Histogram {
     useMask = TRUE
     xRange = "Image Min/Max"
     maskMode = Labels
-    curveType = Line
-    curveStyle = 1
+    curveType = Area
+    curveStyle = 4
     curveTitle = ""
     updateMode = AutoUpdate
     useStepFunction = FALSE
     useZeroAsBinCenter = TRUE
     useBackgroundValue = TRUE
     backgroundValue = 0
-    binSize = 1
+    binSize = 2
     maxBinCount = 25000000
   }
 }
 module SoDiagram2D {
   internal  {
-    frame = "1032 -591 104 56"
+    frame = "785 -641 104 56"
     moduleGroupName = "HU histogram"
     windows  {
       window _default {
@@ -1059,17 +1064,17 @@ module SoDiagram2D {
     minX = -1024
     maxX = -500
     minY = 0
-    maxY = 7423
+    maxY = 1900
     scaleX = 1
     scaleY = 1
     autoRangeX = FALSE
-    autoRangeY = TRUE
+    autoRangeY = FALSE
     axisColor = "1 1 1"
     axisRotation = AXIS_ROTATION_LEFT_BOTTOM
     titleFontHeight = 14
     drawDiagramTitle = FALSE
     diagramTitleString = ""
-    drawGrid = FALSE
+    drawGrid = TRUE
     gridColor = "0.349999994039536 0.349999994039536 0.349999994039536"
     drawLegend = FALSE
     legendPlacement = LEGEND_UPPER_RIGHT
@@ -1132,12 +1137,22 @@ module SoDiagram2D {
 }
 module SoRenderArea {
   internal  {
-    frame = "1029 -683 112 56"
+    frame = "786 -733 112 56"
     moduleGroupName = "HU histogram"
     windows  {
       window _viewer {
-        geometry = "236 142 736 433"
+        geometry = "472 -812 736 433"
         sizeHint = "400 400"
+        wasOpen = no
+      }
+      window _default {
+        geometry = "25 207 351 309"
+        sizeHint = "351 309"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "469 177 500 600"
+        sizeHint = "262 217"
         wasOpen = no
       }
     }
@@ -1172,11 +1187,11 @@ module SoRenderArea {
 }
 module StylePalette {
   internal  {
-    frame = "1069 -491 96 56"
+    frame = "826 -541 96 56"
     moduleGroupName = "HU histogram"
     windows  {
       window _default {
-        geometry = "1165 247 689 560"
+        geometry = "380 197 689 560"
         sizeHint = "679 560"
         wasOpen = no
       }
@@ -1246,14 +1261,14 @@ module StylePalette {
     markerSize12 = 4
     antiAlias1 = TRUE
     antiAlias2 = TRUE
-    antiAlias3 = FALSE
-    antiAlias4 = FALSE
-    antiAlias5 = FALSE
-    antiAlias6 = FALSE
-    antiAlias7 = FALSE
-    antiAlias8 = FALSE
-    antiAlias9 = FALSE
-    antiAlias10 = FALSE
+    antiAlias3 = TRUE
+    antiAlias4 = TRUE
+    antiAlias5 = TRUE
+    antiAlias6 = TRUE
+    antiAlias7 = TRUE
+    antiAlias8 = TRUE
+    antiAlias9 = TRUE
+    antiAlias10 = TRUE
     antiAlias11 = FALSE
     antiAlias12 = TRUE
     name1 = ""
@@ -1277,73 +1292,6 @@ module StylePalette {
     currentAntiAlias = TRUE
     currentName = ""
     reservedEntries = 0
-  }
-}
-module ExtractObjectFromList {
-  internal  {
-    frame = "852 -495 144 72"
-    moduleGroupName = "HU histogram"
-    showNetworkPanel = true
-    windows  {
-      window _default {
-        geometry = "307 278 289 204"
-        sizeHint = "289 204"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = ExtractObjectFromList
-    posToFind = 1
-  }
-}
-module ConcatenateCurves {
-  internal  {
-    frame = "673 -523 136 56"
-    moduleGroupName = "HU histogram"
-    windows  {
-      window _default {
-        geometry = "652 417 135 120"
-        sizeHint = "135 120"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = ConcatenateCurves
-    enable1 = TRUE
-    enable2 = TRUE
-    enable3 = TRUE
-    enable4 = TRUE
-  }
-}
-module DynaCurve {
-  internal  {
-    frame = "759 -640 88 56"
-    moduleGroupName = "HU histogram"
-    windows  {
-      window _automatic {
-        geometry = "469 177 500 600"
-        sizeHint = "262 217"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = DynaCurve
-    displayPoints = TRUE
-    displayROIs = TRUE
-    ROIMode = Current
-    ROIData = Mean
-    ROIStyle = ErrorBar
-    refTime = 0
-    refTimeEnable = FALSE
-    refTimeMode = Difference
-    timeUnit = Seconds
-    timeData = NonConstant
-    dataUnit = ""
-    dataSymbol = E
-    ImageLabel = ""
   }
 }
 module View3D {
@@ -1388,11 +1336,11 @@ module View3D {
     alphaFactor = 1
     colorFactor = "1 1 1"
     camType = TRUE
-    camPosition = "104.59789276123 -662.023254394531 -345.952941894531"
-    camOrientation = "-0.990776777267456 -0.0775997266173363 -0.111083954572678 4.86828708648682"
+    camPosition = "183.797760009766 -640.486450195313 -331.008056640625"
+    camOrientation = "-0.97270542383194 -0.123809844255447 -0.196253180503845 4.86766862869263"
     initialCameraOrientation = CAMERA_KEEP_AS_IS
-    camFar = 891.23523
-    camNear = 497.84888
+    camFar = 960.06067
+    camNear = 428.63135
     camFocal = 694.34601
     camHeight = 0.78539801
     decoration = FALSE
@@ -1515,7 +1463,7 @@ module ROISelect {
     editModeFieldDisable = FALSE
     allTimepoints = FALSE
     usePreview = FALSE
-    timepoint = 0
+    timepoint = 9
     unit = ""
     startWorldPos = "-175.78125 -132.5 -603"
     startVoxelX = 0
@@ -1633,6 +1581,116 @@ module ROISelect {
     annotHorizontalRuler = FALSE
   }
 }
+module SubImage {
+  internal  {
+    frame = "662 -356 88 56"
+    moduleGroupName = "HU histogram"
+    windows  {
+      window _default {
+        geometry = "170 267 409 534"
+        sizeHint = "409 534"
+        wasOpen = yes
+      }
+      window _automatic {
+        geometry = "213 204 500 600"
+        sizeHint = "262 217"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SubImage
+    boxInput = "0 0 0 0 0 0 -1 -1 -1 -1 -1 -1"
+    autoApplyBox = FALSE
+    correctForNegativeSubImageExtents = FALSE
+    enableBoxClamping = FALSE
+    x = 0
+    sx = 112
+    modifyX = TRUE
+    y = 0
+    sy = 100
+    modifyY = TRUE
+    z = 0
+    sz = 72
+    modifyZ = TRUE
+    c = 0
+    sc = 1
+    modifyC = FALSE
+    t = 4
+    st = 1
+    modifyT = TRUE
+    u = 0
+    su = 1
+    modifyU = FALSE
+    fillValue = 0
+    mode = VoxelStartSize
+    autoApply = TRUE
+  }
+}
+module SubImage {
+  internal  {
+    frame = "558 -356 88 56"
+    moduleGroupName = "HU histogram"
+    windows  {
+      window _default {
+        geometry = "35 336 409 534"
+        sizeHint = "409 534"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "148 183 500 600"
+        sizeHint = "262 217"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SubImage1
+    boxInput = "0 0 0 0 0 0 -1 -1 -1 -1 -1 -1"
+    autoApplyBox = FALSE
+    correctForNegativeSubImageExtents = FALSE
+    enableBoxClamping = FALSE
+    x = 0
+    sx = 112
+    modifyX = TRUE
+    y = 0
+    sy = 100
+    modifyY = TRUE
+    z = 0
+    sz = 72
+    modifyZ = TRUE
+    c = 0
+    sc = 1
+    modifyC = FALSE
+    t = 4
+    st = 1
+    modifyT = TRUE
+    u = 0
+    su = 1
+    modifyU = FALSE
+    fillValue = 0
+    mode = VoxelStartSize
+    autoApply = TRUE
+  }
+}
+module HistogramFeatures {
+  internal  {
+    frame = "565 -686 160 56"
+    moduleGroupName = "HU histogram"
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "823 -655 400 477"
+        sizeHint = "346 477"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = HistogramFeatures
+    onInputChangeBehavior = Clear
+  }
+}
 connections  {
   ApplyDicomPixelModifiers.input0 = DirectDicomImport.output0
   ImageResample.input0 = ApplyDicomPixelModifiers.output0
@@ -1652,17 +1710,24 @@ connections  {
   ROISelect1.inImage = ImageResample.output0
   CalculateVolume1.input0 = RegionGrowing1.output0
   LungVolumeInspector.inCurve = CalculateVolume1.outTimeCurve
-  Histogram.input0 = ROISelect1.outImage
-  Histogram.input1 = RegionGrowing1.output0
-  SoDiagram2D.inCurveList = ExtractObjectFromList.outObject
+  Histogram.input0 = SubImage1.output0
+  Histogram.input1 = SubImage.output0
+  Histogram.curveStyle = SubImage.t
+  SoDiagram2D.inCurveList = Histogram.outputHistogramCurve
   SoDiagram2D.inStylePalette = StylePalette.outStylePalette
   SoRenderArea.children = SoDiagram2D.self
-  ExtractObjectFromList.inList = Histogram.outputHistogramCurve
   Ventilation.inImage = Arithmetic2.output0
   Arithmetic2.input0 = ROISelect3.outImage
   Arithmetic2.input1 = ROISelect2.outImage
   ROISelect3.inImage = RegionGrowing1.output0
   ROISelect2.inImage = RegionGrowing1.output0
+  SubImage.input0 = RegionGrowing1.output0
+  SubImage.t = Histogram.curveStyle
+  SubImage.st = SubImage1.st
+  SubImage1.input0 = ROISelect1.outImage
+  SubImage1.t = SubImage.t
+  SubImage1.st = SubImage.st
+  HistogramFeatures.inHistogram = Histogram.outputHistogram
 }
 networkModel  {
   parentItems  {
