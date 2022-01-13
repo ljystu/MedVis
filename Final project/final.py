@@ -5,20 +5,6 @@ from LocalFilePathSupport import populateComboBoxWithDefaultPathVariables
 gRecentDirectoryPath = ""
 
 # Load_____________
-
-def init():
-    ctx.field("name").value = ctx.field("LocalImage1.name").value
-
-
-def fileDialog():
-    exp = ctx.expandFilename(ctx.field("name").stringValue())
-    filename = MLABFileDialog.getOpenFileName(exp, "", "Open file")
-    if filename:
-        ctx.field("name").value = ctx.unexpandFilename(filename)
-
-
-# ISO_____
-
 # ----------------------------------------------------------------
 def inputImageChanged():
     if ctx.field("IsoSUrface1.autoUpdate").value:

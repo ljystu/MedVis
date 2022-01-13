@@ -5,9 +5,8 @@ network  {
 }
 module DirectDicomImport {
   internal  {
-    frame = "-15 421 160 56"
+    frame = "-195 29 136 56"
     moduleGroupName = ""
-    showNetworkPanel = true
     windows  {
       window _default {
         geometry = "224 152 800 484"
@@ -33,7 +32,8 @@ module DirectDicomImport {
     numShownBinaryEntries = 8
     annotate = FALSE
     regExLineFilter = ""
-    fullUserSrcPaths = /Users/harper/Desktop/IN4307/final_assignment/4DCT-Dicom_2
+    fullUserSrcPaths = "D:/OneDrive - Delft University of Technology/Q1-Q2 MedVis/Final Project/4DCT-Dicom_2
+"
     fullTargetPath = ""
     useRelativeCachePaths = FALSE
     writeSingleVolumeCacheFiles = FALSE
@@ -395,7 +395,7 @@ validImage hasIssues fileType voxelType imgExt numVoxels numSlices numTimePoints
 }
 module ApplyDicomPixelModifiers {
   internal  {
-    frame = "-19 301 168 56"
+    frame = "-207 -59 176 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -418,7 +418,7 @@ module ApplyDicomPixelModifiers {
 }
 module ImageResample {
   internal  {
-    frame = "-63 189 112 56"
+    frame = "21 29 120 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -445,11 +445,11 @@ module ImageResample {
 }
 module OrthoView2D {
   internal  {
-    frame = "-339 -142 120 56"
-    moduleGroupName = "region growing"
+    frame = "-220 -180 120 56"
+    moduleGroupName = "Lung Volume"
     windows  {
       window _default {
-        geometry = "207 91 913 740"
+        geometry = "271 -845 913 740"
         sizeHint = "400 436"
         wasOpen = no
       }
@@ -490,14 +490,14 @@ module OrthoView2D {
     valueHighPrecision = TRUE
     annoCoords = Voxel
     showCurrentPos = TRUE
-    worldPosition = "-96.6796875 15.0006713867188 -446.931030273438"
+    worldPosition = "-108.3984375 19.9661865234375 -463.482757568359"
     coloredMode = FALSE
   }
 }
 module GetVoxelValue {
   internal  {
-    frame = "-167 -143 144 72"
-    moduleGroupName = "region growing"
+    frame = "0 -188 144 72"
+    moduleGroupName = "Lung Volume"
     showNetworkPanel = true
     windows  {
       window _automatic {
@@ -514,7 +514,7 @@ module GetVoxelValue {
   }
   fields  {
     instanceName = GetVoxelValue
-    position = "-96.6796875 15.0006713867188 -446.931030273438 0 0 0"
+    position = "-108.3984375 19.9661865234375 -463.482757568359 0 0 0"
     updateMode = AutoClear
     coordinateType = World
     interpolation = NearestNeighbor
@@ -522,8 +522,8 @@ module GetVoxelValue {
 }
 module IntervalThreshold {
   internal  {
-    frame = "29 -135 120 56"
-    moduleGroupName = "region growing"
+    frame = "200 -180 128 56"
+    moduleGroupName = "Lung Volume"
     windows  {
       window _default {
         geometry = "194 248 437 443"
@@ -557,8 +557,8 @@ module IntervalThreshold {
 }
 module RegionGrowing {
   internal  {
-    frame = "21 -391 120 56"
-    moduleGroupName = "region growing"
+    frame = "-24 -452 128 56"
+    moduleGroupName = "Lung Volume"
     windows  {
       window _default {
         geometry = "276 256 707 599"
@@ -575,8 +575,8 @@ module RegionGrowing {
   fields  {
     instanceName = RegionGrowing1
     autoUpdateMode = AutoUpdate
-    lowerThreshold = -2284
-    upperThreshold = 700
+    lowerThreshold = -2339
+    upperThreshold = 645
     enableAutoThresholdInterval = TRUE
     basicNeighborhoodType = BNBH_4D_8_XYZT
     extendedNeighborhoodType = ENBH_2D_4_XZ
@@ -609,8 +609,8 @@ module RegionGrowing {
 }
 module IsoSurface {
   internal  {
-    frame = "-127 -535 128 56"
-    moduleGroupName = "region growing"
+    frame = "-232 -532 128 56"
+    moduleGroupName = "Lung Volume"
     showNetworkPanel = true
     windows  {
       window _default {
@@ -637,8 +637,8 @@ module IsoSurface {
 }
 module SoExaminerViewer {
   internal  {
-    frame = "-139 -615 136 56"
-    moduleGroupName = "region growing"
+    frame = "-228 -643 144 56"
+    moduleGroupName = "Lung Volume"
     windows  {
       window _viewer {
         geometry = "519 277 400 400"
@@ -695,10 +695,10 @@ module SoExaminerViewer {
     stereoViewing = FALSE
     stereoOffset = 3
     height = 0.78539819
-    position = "609.111145019531 -224.075042724609 -439.214660644531"
-    orientation = "-0.735779345035553 -0.359012067317963 -0.574229001998901 4.21807098388672"
-    nearDistance = 477.5267
-    farDistance = 845.87183
+    position = "-506.830322265625 -438.280181884766 -434.906280517578"
+    orientation = "0.841279029846191 -0.392758578062057 -0.371470302343369 1.71015918254852"
+    nearDistance = 472.26974
+    farDistance = 856.25964
     focalDistance = 662.7265
     forceRedrawOnInteraction = FALSE
     button1events = TO_VIEWER
@@ -719,8 +719,8 @@ module SoExaminerViewer {
 }
 module ConstantXMarkerList {
   internal  {
-    frame = "25 -311 144 56"
-    moduleGroupName = "region growing"
+    frame = "129 -339 144 56"
+    moduleGroupName = "Lung Volume"
     windows  {
       window _default {
         geometry = "253 353 361 539"
@@ -736,23 +736,28 @@ module ConstantXMarkerList {
   }
   fields  {
     instanceName = ConstantXMarkerList
-    markerList = "-96.6796875 15.0006713867188 -446.931030273438"
+    markerList = "-108.3984375 19.9661865234375 -463.482757568359"
   }
 }
 module View3D {
   internal  {
-    frame = "41 -615 144 56"
-    moduleGroupName = "region growing"
+    frame = "-32 -608 144 64"
+    moduleGroupName = "Lung Volume"
     windows  {
       window _default {
         geometry = "39 75 1033 640"
         sizeHint = "1033 640"
         wasOpen = no
       }
+      window _automatic {
+        geometry = "469 177 500 600"
+        sizeHint = "262 217"
+        wasOpen = no
+      }
     }
   }
   fields  {
-    instanceName = View3D1
+    instanceName = RespirationCircle
     autoViewAll = TRUE
     inventorInputOn = TRUE
     inventorOutputOn = FALSE
@@ -776,11 +781,11 @@ module View3D {
     alphaFactor = 1
     colorFactor = "1 1 1"
     camType = TRUE
-    camPosition = "-60.993034362793 -550.203125 -57.0520935058594"
-    camOrientation = "0.992790222167969 -0.0237137209624052 -0.117495588958263 0.957075774669647"
+    camPosition = "184.426361083984 -634.042785644531 -302.810791015625"
+    camOrientation = "0.9674032330513 0.104313753545284 0.230759277939796 1.38534128665924"
     initialCameraOrientation = CAMERA_KEEP_AS_IS
-    camFar = 911.49542
-    camNear = 477.62912
+    camFar = 913.39752
+    camNear = 475.73099
     camFocal = 694.34601
     camHeight = 0.78539801
     decoration = FALSE
@@ -860,8 +865,8 @@ module View3D {
 }
 module FastMorphology {
   internal  {
-    frame = "-343 -359 160 72"
-    moduleGroupName = "region growing"
+    frame = "-192 -348 160 72"
+    moduleGroupName = "Lung Volume"
     showNetworkPanel = true
     windows  {
       window _default {
@@ -890,7 +895,7 @@ module FastMorphology {
 }
 module ROISelect {
   internal  {
-    frame = "-35 85 88 56"
+    frame = "33 -59 96 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -947,8 +952,8 @@ module ROISelect {
 }
 module CalculateVolume {
   internal  {
-    frame = "209 -615 160 72"
-    moduleGroupName = "region growing"
+    frame = "208 -580 160 72"
+    moduleGroupName = "Lung Volume"
     showNetworkPanel = true
     windows  {
       window _default {
@@ -974,8 +979,8 @@ module CalculateVolume {
 }
 module CurveInspector {
   internal  {
-    frame = "234 -733 112 56"
-    moduleGroupName = "region growing"
+    frame = "208 -679 152 64"
+    moduleGroupName = "Lung Volume"
     windows  {
       window _default {
         geometry = "603 373 599 257"
@@ -985,9 +990,9 @@ module CurveInspector {
     }
   }
   fields  {
-    instanceName = CurveInspector
-    detail = FALSE
-    panelPlacement = Right
+    instanceName = LungVolumeInspector
+    detail = TRUE
+    panelPlacement = Bottom
     autoRangeXY = TRUE
     autoRangeX = TRUE
     autoRangeY = TRUE
@@ -999,18 +1004,23 @@ module CurveInspector {
 }
 module Histogram {
   internal  {
-    frame = "848 -391 120 56"
+    frame = "452 -463 120 56"
     moduleGroupName = "HU histogram"
     showNetworkPanel = true
     windows  {
       window _default {
-        geometry = "653 284 421 385"
-        sizeHint = "421 385"
+        geometry = "1133 -746 437 389"
+        sizeHint = "437 389"
         wasOpen = no
       }
       window _automatic {
-        geometry = "469 177 500 600"
+        geometry = "890 247 500 600"
         sizeHint = "262 217"
+        wasOpen = no
+      }
+      window _scriptingconsole {
+        geometry = "419 227 600 500"
+        sizeHint = "256 192"
         wasOpen = no
       }
     }
@@ -1020,21 +1030,21 @@ module Histogram {
     useMask = TRUE
     xRange = "Image Min/Max"
     maskMode = Labels
-    curveType = Line
-    curveStyle = 1
+    curveType = Area
+    curveStyle = 9
     curveTitle = ""
     updateMode = AutoUpdate
     useStepFunction = FALSE
     useZeroAsBinCenter = TRUE
     useBackgroundValue = TRUE
     backgroundValue = 0
-    binSize = 1
+    binSize = 2
     maxBinCount = 25000000
   }
 }
 module SoDiagram2D {
   internal  {
-    frame = "1032 -591 104 56"
+    frame = "543 -565 112 56"
     moduleGroupName = "HU histogram"
     windows  {
       window _default {
@@ -1054,17 +1064,17 @@ module SoDiagram2D {
     minX = -1024
     maxX = -500
     minY = 0
-    maxY = 7423
+    maxY = 1900
     scaleX = 1
     scaleY = 1
     autoRangeX = FALSE
-    autoRangeY = TRUE
+    autoRangeY = FALSE
     axisColor = "1 1 1"
     axisRotation = AXIS_ROTATION_LEFT_BOTTOM
     titleFontHeight = 14
     drawDiagramTitle = FALSE
     diagramTitleString = ""
-    drawGrid = FALSE
+    drawGrid = TRUE
     gridColor = "0.349999994039536 0.349999994039536 0.349999994039536"
     drawLegend = FALSE
     legendPlacement = LEGEND_UPPER_RIGHT
@@ -1096,7 +1106,7 @@ module SoDiagram2D {
     curveIndexHighlighted = ""
     reorderHighlightedCurves = FALSE
     borderH = 39
-    borderV = 26
+    borderV = 27
     autoBorderH = TRUE
     autoBorderV = TRUE
     drawAxisX = TRUE
@@ -1127,12 +1137,22 @@ module SoDiagram2D {
 }
 module SoRenderArea {
   internal  {
-    frame = "1029 -683 112 56"
+    frame = "543 -669 112 56"
     moduleGroupName = "HU histogram"
     windows  {
       window _viewer {
-        geometry = "236 142 736 433"
+        geometry = "472 -812 736 433"
         sizeHint = "400 400"
+        wasOpen = no
+      }
+      window _default {
+        geometry = "25 207 351 309"
+        sizeHint = "351 309"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "469 177 500 600"
+        sizeHint = "262 217"
         wasOpen = no
       }
     }
@@ -1167,11 +1187,11 @@ module SoRenderArea {
 }
 module StylePalette {
   internal  {
-    frame = "1069 -491 96 56"
+    frame = "664 -471 96 56"
     moduleGroupName = "HU histogram"
     windows  {
       window _default {
-        geometry = "1165 247 689 560"
+        geometry = "380 197 689 560"
         sizeHint = "679 560"
         wasOpen = no
       }
@@ -1241,14 +1261,14 @@ module StylePalette {
     markerSize12 = 4
     antiAlias1 = TRUE
     antiAlias2 = TRUE
-    antiAlias3 = FALSE
-    antiAlias4 = FALSE
-    antiAlias5 = FALSE
-    antiAlias6 = FALSE
-    antiAlias7 = FALSE
-    antiAlias8 = FALSE
-    antiAlias9 = FALSE
-    antiAlias10 = FALSE
+    antiAlias3 = TRUE
+    antiAlias4 = TRUE
+    antiAlias5 = TRUE
+    antiAlias6 = TRUE
+    antiAlias7 = TRUE
+    antiAlias8 = TRUE
+    antiAlias9 = TRUE
+    antiAlias10 = TRUE
     antiAlias11 = FALSE
     antiAlias12 = TRUE
     name1 = ""
@@ -1274,81 +1294,14 @@ module StylePalette {
     reservedEntries = 0
   }
 }
-module ExtractObjectFromList {
-  internal  {
-    frame = "852 -495 144 72"
-    moduleGroupName = "HU histogram"
-    showNetworkPanel = true
-    windows  {
-      window _default {
-        geometry = "307 278 289 204"
-        sizeHint = "289 204"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = ExtractObjectFromList
-    posToFind = 1
-  }
-}
-module ConcatenateCurves {
-  internal  {
-    frame = "673 -523 136 56"
-    moduleGroupName = "HU histogram"
-    windows  {
-      window _default {
-        geometry = "652 417 135 120"
-        sizeHint = "135 120"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = ConcatenateCurves
-    enable1 = TRUE
-    enable2 = TRUE
-    enable3 = TRUE
-    enable4 = TRUE
-  }
-}
-module DynaCurve {
-  internal  {
-    frame = "759 -640 88 56"
-    moduleGroupName = "HU histogram"
-    windows  {
-      window _automatic {
-        geometry = "469 177 500 600"
-        sizeHint = "262 217"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = DynaCurve
-    displayPoints = TRUE
-    displayROIs = TRUE
-    ROIMode = Current
-    ROIData = Mean
-    ROIStyle = ErrorBar
-    refTime = 0
-    refTimeEnable = FALSE
-    refTimeMode = Difference
-    timeUnit = Seconds
-    timeData = NonConstant
-    dataUnit = ""
-    dataSymbol = E
-    ImageLabel = ""
-  }
-}
 module View3D {
   internal  {
-    frame = "-799 -683 144 56"
+    frame = "-528 -678 144 64"
     moduleGroupName = "Dynamic ventilation"
     windows  {
       window _default {
-        geometry = "284 93 1156 640"
-        sizeHint = "1156 640"
+        geometry = "162 88 1154 640"
+        sizeHint = "1154 640"
         wasOpen = no
       }
       window LutEditor {
@@ -1359,7 +1312,7 @@ module View3D {
     }
   }
   fields  {
-    instanceName = View3D
+    instanceName = Ventilation
     autoViewAll = TRUE
     inventorInputOn = TRUE
     inventorOutputOn = FALSE
@@ -1367,10 +1320,10 @@ module View3D {
     rendererType = Slicer
     currentTimePoint = 0
     staticSamplingRate = 1
-    quality = 1
+    quality = 0.97060001
     filterVolumeData = FilterLinear
-    lutEditorColorPoints = "[ 0 0.333332985639572 0.686275005340576 0.807843029499054, 249.362518310547 0.172549024224281 0.105882354080677 0.886274516582489, 1020.82775878906 0.220747068524361 0.305247008800507 0.707722663879395, 1737.74499511719 0.325490206480026 0.992156863212585 0.121568627655506, 3023.5205078125 1 0.133333340287209 0, 4095 0.439215689897537 0 0.0392156876623631 ]"
-    lutEditorAlphaPoints = "[ 0 0, 249.362518310547 0.0185676384717226, 1020.82775878906 0.225464195013046, 1737.74499511719 0.405835539102554, 3023.5205078125 0.782493352890015, 4095 1 ]"
+    lutEditorColorPoints = "[ 0 0.0117647061124444 0 0.964705884456635, 264.947662353516 0.0823529437184334 0 1, 1215.64221191406 0.439215689897537 0.513725519180298 0.854901969432831, 1722.15979003906 0.325490206480026 0.992156863212585 0.121568627655506, 2142.958984375 1 0.972549021244049 0, 2415.69921875 0.903590083122253 0.110410705208778 0.0067419521510601, 4095 0.439215689897537 0 0.0392156876623631 ]"
+    lutEditorAlphaPoints = "[ 0 0, 264.947662353516 0.050397876650095, 1215.64221191406 0.183023869991302, 1722.15979003906 0.358090192079544, 2142.958984375 0.596816956996918, 2415.69921875 1, 4095 1 ]"
     lutEditorRelativeLut = FALSE
     lutEditorColorInterpolation = InterpolateRGB
     lutEditorAlphaFactor = 1
@@ -1383,12 +1336,12 @@ module View3D {
     alphaFactor = 1
     colorFactor = "1 1 1"
     camType = TRUE
-    camPosition = "112.669448852539 -485.696899414063 -255.505737304688"
-    camOrientation = "0.965264081954956 0.0675741508603096 0.252386629581451 1.23604154586792"
+    camPosition = "103.76025390625 -631.110595703125 -228.232070922852"
+    camOrientation = "-0.980648279190063 -0.0408697314560413 -0.191464439034462 5.02751541137695"
     initialCameraOrientation = CAMERA_KEEP_AS_IS
-    camFar = 779.25153
-    camNear = 328.06186
-    camFocal = 553.43146
+    camFar = 909.21979
+    camNear = 479.90015
+    camFocal = 694.34601
     camHeight = 0.78539801
     decoration = FALSE
     annotations = TRUE
@@ -1412,10 +1365,10 @@ module View3D {
     renderer.toneShadingWarmDiffuse = 0.60000002
     renderer.toneShadingColdDiffuse = 0.2
     renderer.toneShadingAngle = 45
-    renderer.materialAmbient = 0.60000002
+    renderer.materialAmbient = 0.52600002
     renderer.materialDiffuse = 1
-    renderer.materialSpecular = 1
-    renderer.materialSpecularity = 32
+    renderer.materialSpecular = 0.56099999
+    renderer.materialSpecularity = 14.4
     renderer.light1Enabled = TRUE
     renderer.light1DiffuseIntensity = 1
     renderer.light1SpecularIntensity = 1
@@ -1467,7 +1420,7 @@ module View3D {
 }
 module Arithmetic2 {
   internal  {
-    frame = "-814 -566 96 72"
+    frame = "-503 -571 96 72"
     moduleGroupName = "Dynamic ventilation"
     showNetworkPanel = true
     windows  {
@@ -1488,11 +1441,11 @@ module Arithmetic2 {
 }
 module ROISelect {
   internal  {
-    frame = "-894 -438 96 56"
+    frame = "-568 -442 96 56"
     moduleGroupName = "Dynamic ventilation"
     windows  {
       window _default {
-        geometry = "545 495 1098 768"
+        geometry = "370 274 698 406"
         sizeHint = "698 406"
         wasOpen = no
       }
@@ -1510,7 +1463,7 @@ module ROISelect {
     editModeFieldDisable = FALSE
     allTimepoints = FALSE
     usePreview = FALSE
-    timepoint = 9
+    timepoint = 0
     unit = ""
     startWorldPos = "-175.78125 -132.5 -603"
     startVoxelX = 0
@@ -1527,12 +1480,12 @@ module ROISelect {
     boxColor = "1 0.979525029659271 0.38740399479866"
     allowDraw = TRUE
     reset = FALSE
-    currentPos = "-34.5070495605469 28.3331909179688 -603"
+    currentPos = "-29.0484619140625 51.0680541992188 -603"
     currentPosShiftListen = RELEASED
     currentPosCtrlListen = RELEASED
     currentPosColor = "1 1 1"
     layout = LAYOUT_CUBE_EQUAL
-    worldPosition = "-34.5070495605469 28.3331909179688 -603"
+    worldPosition = "-29.0484619140625 51.0680541992188 -603"
     useGlobalInputImage = TRUE
     restriction = MaxMBytesIsotropic
     limit = 10
@@ -1548,32 +1501,14 @@ module ROISelect {
     annotHorizontalRuler = FALSE
   }
 }
-module SortSlices4D {
-  internal  {
-    frame = "-658 -518 104 56"
-    moduleGroupName = "Dynamic ventilation"
-    windows  {
-      window _default {
-        geometry = "619 446 200 62"
-        sizeHint = "200 62"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = SortSlices4D
-    orderTimeFirst = FALSE
-    numTemporalPos = 1
-  }
-}
 module ROISelect {
   internal  {
-    frame = "-765 -438 88 56"
+    frame = "-440 -442 96 56"
     moduleGroupName = "Dynamic ventilation"
     windows  {
       window _default {
-        geometry = "271 53 1098 768"
-        sizeHint = "698 406"
+        geometry = "606 376 708 389"
+        sizeHint = "708 389"
         wasOpen = no
       }
       window _automatic {
@@ -1607,12 +1542,12 @@ module ROISelect {
     boxColor = "1 0.979525029659271 0.38740399479866"
     allowDraw = TRUE
     reset = FALSE
-    currentPos = "-152.693313598633 -55.7288665771484 -459"
+    currentPos = "-53.233757019043 -36.5860290527344 -603"
     currentPosShiftListen = RELEASED
     currentPosCtrlListen = RELEASED
     currentPosColor = "1 1 1"
     layout = LAYOUT_CUBE_EQUAL
-    worldPosition = "-152.693313598633 -55.7288665771484 -459"
+    worldPosition = "-53.233757019043 -36.5860290527344 -603"
     useGlobalInputImage = TRUE
     restriction = MaxMBytesIsotropic
     limit = 10
@@ -1626,6 +1561,98 @@ module ROISelect {
     annotShowOrientation = ANNO_ORIENTATION_SIZE_WEIGHTED
     annotVerticalRuler = TRUE
     annotHorizontalRuler = FALSE
+  }
+}
+module SubImage {
+  internal  {
+    frame = "669 -347 88 56"
+    moduleGroupName = "HU histogram"
+    windows  {
+      window _default {
+        geometry = "170 267 409 534"
+        sizeHint = "409 534"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "213 204 500 600"
+        sizeHint = "262 217"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SubImage
+    boxInput = "0 0 0 0 0 0 -1 -1 -1 -1 -1 -1"
+    autoApplyBox = FALSE
+    correctForNegativeSubImageExtents = FALSE
+    enableBoxClamping = FALSE
+    x = 0
+    sx = 112
+    modifyX = TRUE
+    y = 0
+    sy = 100
+    modifyY = TRUE
+    z = 0
+    sz = 72
+    modifyZ = TRUE
+    c = 0
+    sc = 1
+    modifyC = FALSE
+    t = 9
+    st = 1
+    modifyT = TRUE
+    u = 0
+    su = 1
+    modifyU = FALSE
+    fillValue = 0
+    mode = VoxelStartSize
+    autoApply = TRUE
+  }
+}
+module SubImage {
+  internal  {
+    frame = "457 -355 96 56"
+    moduleGroupName = "HU histogram"
+    windows  {
+      window _default {
+        geometry = "35 336 409 534"
+        sizeHint = "409 534"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "148 183 500 600"
+        sizeHint = "262 217"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SubImage1
+    boxInput = "0 0 0 0 0 0 -1 -1 -1 -1 -1 -1"
+    autoApplyBox = FALSE
+    correctForNegativeSubImageExtents = FALSE
+    enableBoxClamping = FALSE
+    x = 0
+    sx = 112
+    modifyX = TRUE
+    y = 0
+    sy = 100
+    modifyY = TRUE
+    z = 0
+    sz = 72
+    modifyZ = TRUE
+    c = 0
+    sc = 1
+    modifyC = FALSE
+    t = 9
+    st = 1
+    modifyT = TRUE
+    u = 0
+    su = 1
+    modifyU = FALSE
+    fillValue = 0
+    mode = VoxelStartSize
+    autoApply = TRUE
   }
 }
 connections  {
@@ -1642,29 +1669,35 @@ connections  {
   IsoSurface1.inImage = RegionGrowing1.output0
   SoExaminerViewer2.children = IsoSurface1.outScene
   ConstantXMarkerList.markerList = OrthoView2D.worldPosition
-  View3D1.inImage = RegionGrowing1.output0
+  RespirationCircle.inImage = RegionGrowing1.output0
   FastMorphology.input0 = IntervalThreshold.output0
   ROISelect1.inImage = ImageResample.output0
   CalculateVolume1.input0 = RegionGrowing1.output0
-  CurveInspector.inCurve = CalculateVolume1.outTimeCurve
-  Histogram.input0 = ROISelect1.outImage
-  Histogram.input1 = RegionGrowing1.output0
-  SoDiagram2D.inCurveList = ExtractObjectFromList.outObject
+  LungVolumeInspector.inCurve = CalculateVolume1.outTimeCurve
+  Histogram.input0 = SubImage1.output0
+  Histogram.input1 = SubImage.output0
+  Histogram.curveStyle = SubImage.t
+  SoDiagram2D.inCurveList = Histogram.outputHistogramCurve
   SoDiagram2D.inStylePalette = StylePalette.outStylePalette
   SoRenderArea.children = SoDiagram2D.self
-  ExtractObjectFromList.inList = Histogram.outputHistogramCurve
-  View3D.inImage = Arithmetic2.output0
+  Ventilation.inImage = Arithmetic2.output0
   Arithmetic2.input0 = ROISelect3.outImage
   Arithmetic2.input1 = ROISelect2.outImage
   ROISelect3.inImage = RegionGrowing1.output0
   ROISelect2.inImage = RegionGrowing1.output0
+  SubImage.input0 = RegionGrowing1.output0
+  SubImage.t = Histogram.curveStyle
+  SubImage.st = SubImage1.st
+  SubImage1.input0 = ROISelect1.outImage
+  SubImage1.t = SubImage.t
+  SubImage1.st = SubImage.st
 }
 networkModel  {
   parentItems  {
     0  {
       MLABNetworkModelItem MLABNetworkModelItemGroup {
         uniqueId = 74
-        objectName = "region growing"
+        objectName = "Lung Volume"
         parentUniqueId = 0
         color  {
           r = 140

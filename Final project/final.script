@@ -2,12 +2,14 @@ Interface {
   Parameters {
     Field persistentToggle { type = Bool value = false }    
     Field name     { type = string value = "" }
+    Field LungVolumeLabel    { type = string value = "" }
+    Field HULabel     { type = string value = "" }
+    Field TimepointLabel     { type = string value = "" }
     Field isoValue         { internalName = "IsoSurface1.isoValue"      }
     Field quality          { type = int value = 3 min = 1 max = 12           }           
     Field apply       { type = trigger triggersLoading = Yes }
     Field autoUpdate  { type = bool value = false }
     Field autoApply   { type = bool value = false }
-    Filed fullUserPaths { type = String value = false }
     Field timepoint         { internalName = "RespirationCircle.currentTimePoint"      }
     Field timepointref {internalName = ROISelect2.timepoint}
     Field timepointselect {internalName = ROISelect3.timepoint}
@@ -19,15 +21,10 @@ Interface {
 
 ///////////////////////////////////////
 
-// Secondly, there is the Commands section. It is used to declare and import Python scripts and assign functions.
-// For instance, a Button may require a certain function to trigger, but MeVisLab will need to know where the source definitions are located.
 Commands {
 
   // Indicate the source Python file
   source = $(LOCAL)/final.py
-  
-  // Lets also update the ProgressBar with a float value derived from the counter value
-  initCommand        = init
   FieldListener { 
     listenField = timepoint
     command     = updateFields
@@ -36,17 +33,8 @@ Commands {
 
 ///////////////////////////////////////
 
-// Window definition! Here all the MDL code will go which dictates how UI elements look.
-
 Window "Ventilation Inspector"{
-  wakeupCommand = initConfigurationListView
-    // Splitter organizes any children in it horizontally or vertically. 
-    // It will show draggable borders between elements. If you hover over the dividing line between 
-    // for instance Viewer A and the settings pane in the middle, you will be able to resize the settings and Viewer area.
-    Splitter {
-    
-      // Names of modules/viewers are case sensitive.
-      
+    Splitter {    
       Vertical {
         expandX        = YES
         preferredWidth = 800
@@ -95,26 +83,23 @@ Window "Ventilation Inspector"{
                       Field timepoint { step = 1 }
                     }
                   }
-                  Horizontal {
-                    CheckBox autoUpdate {}
-                    CheckBox autoApply {}
-                    Button   apply {}
-                  }
-                } 
-                
+         
+                }   
             }
-              
-
-              Panel LungVolumeInspector.self {
+             Vertical {
+             FieldLabel LungVolumeLabel { title = "Lung Volume Change"  alignX = Center} 
+             Panel LungVolumeInspector.self {
                 module = LungVolumeInspector
                 name            = "LungVolumeInspector"    
                 preferredWidth  = 600
                 preferredHeight = 500
               }
+              }
             }
           }
           TabViewItem "HU Lung Volume" {
             Vertical {
+
               Viewer SoRenderArea.self{
                 module          = Histogram
                 name            = "Histogram"    
@@ -123,8 +108,9 @@ Window "Ventilation Inspector"{
               }
               Box "Settings"{
                 Horizontal {
+                  FieldLabel HULabel { title = "Select range of HU value" } 
                   Horizontal {
-                    expandX        = YNo
+                    expandX        = No
                     Field Xmin {step = 50}
                     Field Xmax {step = 50}
                   }
@@ -148,6 +134,7 @@ Window "Ventilation Inspector"{
               }
               Box "Timepoint" {
                 Horizontal {
+                  FieldLabel TimepointLabel { title = "Select 2 timepoints and compare the lung deformation" } 
                   Field timepointref { step = 1 }
                   Field timepointselect {step = 1}
                 }
